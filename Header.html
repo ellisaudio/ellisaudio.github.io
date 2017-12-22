@@ -1,0 +1,40 @@
+  <head>  
+  <div class='row' style='background-color:white'>
+  <div class='col-2' style='margin: 0.5% 0;padding: 15px 0;'></div>
+  <div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
+  <img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;'>
+  </div>
+  <div class='col-6' style='margin: 0 0.5%;padding: 0 15px;max-height:10%;min-height:10%;'>
+  <h1 style='font-size:200%;float:left;margin-top:5%;'>Ellis Audio</h1>
+  </div>
+  <div class="col-3" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
+  <br>
+  <b>Get a Quote Today<br></b>
+  Ph: 0458 708 648<br>
+  E: EllisAudioHire@gmail.com<br>
+  Yeronga, Brisbane, QLD, Australia
+  </div>
+  <div class='row' style=''>
+  <div class='col-12' style='margin: 0;padding: 0;background-color:#40404d;'>
+  <nav id="nav" role="navigation" style="padding: 0;margin:0;">
+<!--	<a href="#nav" title="Show navigation">Show navigation</a>
+	<a href="#" title="Hide navigation">Hide navigation</a>-->
+	<ul class="clearfix" style="padding: 0;margin:0;">
+      <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Hire Packages').getItemsHtml('Hire Packages', 'All');$('#filter-btn').hide()">Packages for Hire</button></li>
+      <li>
+		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
+		<ul>
+	      <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Audio Hire').getItemsHtml('Audio Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Audio Hire').getCategories();">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Visual Hire').getItemsHtml('Visual Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Visual Hire').getCategories();">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Lighting Hire').getItemsHtml('Lighting Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Lighting Hire').getCategories();">Lighting Equipment</button></li>
+		</ul>
+	  </li>
+      <li>
+	    <button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('For Sale').getItemsHtml('For Sale', 'All');$('#filter-btn').hide()">Equipment for Sale</button>
+	  </li>
+	  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems.withUserObject('Contact Us').getItemsHtml('Contact Us');$('#filter-btn').hide()">About Us</button>
+  	  </li>
+	</ul>
+  </nav>
+  </div></div></div>
+  </head>
