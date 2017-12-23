@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html onload="onPageLoad()">
+<html>
 <div id="container">
   <head>
     <base target="_top">
@@ -361,57 +361,59 @@
   </div>    
   <!-- <script src="jquery-2.1.4.min.js">
 </script> -->
-<script>
-function onPageLoad()
-{
-  document.getElementById("items").innerHTML("1234");
-}
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script >
+// function onPageLoad()
+// {
+//   document.getElementById("items").innerHTML("1234");
+// }
 // jQuery.noConflict();
 // // The code in this function runs when the page is loaded.
-// jQuery(document).ready(function(){
-//   jQuery('#items').remove();
+$(function(){
+//   $('#items').empty().append("Something else");
 // });
 // ID of the script to call. Acquire this from the Apps Script editor,
 // under Publish > Deploy as API executable.
-// var scriptId = "1NBYjhLJ994OoGLm9fC9nnYkj9OVIH_daaZadVyON0xAEe_MNrllTMkBQ";
+var scriptId = "1NBYjhLJ994OoGLm9fC9nnYkj9OVIH_daaZadVyON0xAEe_MNrllTMkBQ";
 
-// // Initialize parameters for function call.
-// var sheetId = "https://docs.google.com/spreadsheets/d/1IXHGkDh4xlq46pbKyUhAOx4hxg0hmvmjIaHK6n3ZR_s/edit#gid=0";
+// Initialize parameters for function call.
+var sheetId = "https://docs.google.com/spreadsheets/d/1IXHGkDh4xlq46pbKyUhAOx4hxg0hmvmjIaHK6n3ZR_s/edit#gid=0";
 
-// // Create execution request.
-// var request = {
-//     'function': 'getSheetNames',
-//     'parameters': [sheetId],
-//     'devMode': true   // Optional.
-// };
+// Create execution request.
+var request = {
+    'function': 'getSheetNames',
+    'parameters': [sheetId],
+    'devMode': true   // Optional.
+};
 
-// // Make the request.
-// var op = gapi.client.request({
-//     'root': 'https://script.googleapis.com',
-//     'path': 'v1/scripts/' + scriptId + ':run',
-//     'method': 'POST',
-//     'body': request
-// });
+// Make the request.
+var op = gapi.client.request({
+    'root': 'https://script.googleapis.com',
+    'path': 'v1/scripts/' + scriptId + ':run',
+    'method': 'POST',
+    'body': request
+});
 
-// // Log the results of the request.
-// op.execute(function(resp) {
-//   if (resp.error && resp.error.status) {
-//     // The API encountered a problem before the script started executing.
-//     console.log('Error calling API: ' + JSON.stringify(resp, null, 2));
-//   } else if (resp.error) {
-//     // The API executed, but the script returned an error.
-//     var error = resp.error.details[0];
-//     console.log('Script error! Message: ' + error.errorMessage);
-//   } else {
-//     // Here, the function returns an array of strings.
-//     var sheetNames = resp.response.result;
-//     console.log('Sheet names in spreadsheet:');
-//     sheetNames.forEach(function(name){
-//       $('#page-header').empty().append(name);
-//       console.log(name);
-//     });
-//   }
-// });
+// Log the results of the request.
+op.execute(function(resp) {
+  $('#items').empty().append(resp.response.result);
+  if (resp.error && resp.error.status) {
+    // The API encountered a problem before the script started executing.
+    console.log('Error calling API: ' + JSON.stringify(resp, null, 2));
+  } else if (resp.error) {
+    // The API executed, but the script returned an error.
+    var error = resp.error.details[0];
+    console.log('Script error! Message: ' + error.errorMessage);
+  } else {
+    // Here, the function returns an array of strings.
+    var sheetNames = resp.response.result;
+    console.log('Sheet names in spreadsheet:');
+    sheetNames.forEach(function(name){
+      
+      console.log(name);
+    });
+  }
+});
   
 
   //google.script.run.withSuccessHandler(showItems).withUserObject(<?=page?>).getItemsHtml(<?=page?>, "Show All");
