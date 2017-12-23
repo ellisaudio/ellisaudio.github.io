@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
-<!--<html>-->
+<html onload="onPageLoad()">
 <div id="container">
+  <head>
     <base target="_top">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -291,8 +292,7 @@
   {
     background-color: #313deb;
   }
-  </style>
-      <head>  
+  </style> 
   <div class='row' style='background-color:white'>
   <div class='col-2' style='margin: 0.5% 0;padding: 15px 0;'></div>
   <div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
@@ -332,8 +332,8 @@
   </nav>
   </div></div></div>
   </head>
+  <body>
     <div id="body">
-  <!--<body>-->
   <div class="row" style="text-align:center; color:white;margin:auto;"> 
   <div class="col-12">
   <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;"><?=page?></h1>
@@ -358,17 +358,19 @@
   <div id="items" class="col-5" >
   Loading...
     </div>
-  <!--</body>-->
   </div>    
-  <script
-src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-
-
-
-// The code in this function runs when the page is loaded.
-// $(function() 
-// {
-$('#page-header').empty().append(Loading...);
+  <!-- <script src="jquery-2.1.4.min.js">
+</script> -->
+<script>
+function onPageLoad()
+{
+  document.getElementById("items").innerHTML("1234");
+}
+// jQuery.noConflict();
+// // The code in this function runs when the page is loaded.
+// jQuery(document).ready(function(){
+//   jQuery('#items').remove();
+// });
 // ID of the script to call. Acquire this from the Apps Script editor,
 // under Publish > Deploy as API executable.
 // var scriptId = "1NBYjhLJ994OoGLm9fC9nnYkj9OVIH_daaZadVyON0xAEe_MNrllTMkBQ";
@@ -450,6 +452,8 @@ $('#page-header').empty().append(Loading...);
 //   return;
 // }
 </script>
+</body>
+<footer>
   <div id='footer'>
   <br>
   Ph: 0458 708 648<br>
@@ -458,7 +462,8 @@ $('#page-header').empty().append(Loading...);
   © Nicholas James Ellis  |   ABN: 82 403 813 991
   </div>
 </div>
-<!--</html>-->
+</footer>
+</html>
 
 
 
