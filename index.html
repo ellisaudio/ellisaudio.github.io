@@ -371,7 +371,7 @@ $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(
   {
     for(var ii = 1; ii <= type.numProducts; ii++)
     {
-      $.getJSON("ellisaudio.github.io/DB/Products/Audio/1.json").done(function(item) 
+      $.getJSON("ellisaudio.github.io/DB/Products/Audio/"+ii+".json").done(function(item) 
       {
         var html = "<div class='col-item'>";
         html += "<img src='"+item.photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
