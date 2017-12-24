@@ -366,7 +366,7 @@
 // // The code in this function runs when the page is loaded.
 $(function()
 {
-
+$('#items').empty()
 $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
   {
     for(var ii = 1; ii <= type.numProducts; ii++)
@@ -379,7 +379,7 @@ $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(
         html += "<h2>$"+item.perDay+"/Day       $"+item.perWeek+"/Week</h2>";
         html += "<a href='"+item.website+"'>More Info</a>";
         html += "</span></div>";
-        $('#items').empty().append(html);
+        $('#items').append(html);
       });
     }
   });
