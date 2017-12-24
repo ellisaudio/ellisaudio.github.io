@@ -318,15 +318,15 @@
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
 		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Audio Hire').getItemsHtml('Audio Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Audio Hire').getCategories();">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Visual Hire').getItemsHtml('Visual Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Visual Hire').getCategories();">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('Lighting Hire').getItemsHtml('Lighting Hire', 'All');google.script.run.withSuccessHandler(showFilter).withUserObject('Lighting Hire').getCategories();">Lighting Equipment</button></li>
+	      <li><button onclick="$('#items').empty().append('Loading...');showItems('Audio Hire');showFilter('Audio Hire');">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');showItems('Visual Hire');showFilter('Visual Hire');">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');showItems('Lighting Hire')showFilter('Lighting Hire');">Lighting Equipment</button></li>
 		</ul>
 	  </li>
       <li>
-	    <button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems).withUserObject('For Sale').getItemsHtml('For Sale', 'All');$('#filter-btn').hide()">Equipment for Sale</button>
+	    <button onclick="$('#items').empty().append('Loading...');showItems('For Sale');$('#filter-btn').hide()">Equipment for Sale</button>
 	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');google.script.run.withSuccessHandler(showItems.withUserObject('Contact Us').getItemsHtml('Contact Us');$('#filter-btn').hide()">About Us</button>
+	  <li><button onclick="$('#items').empty().append('Loading...');showItems('Contact Us');$('#filter-btn').hide()">About Us</button>
   	  </li>
 	</ul>
   </nav>
