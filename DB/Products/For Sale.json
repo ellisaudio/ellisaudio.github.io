@@ -4,11 +4,10 @@
    "catelog": 53,
    "category": "Microphones",
    "quantity": 1,
-   "perDay": "$350.00",
-   "perWeek": "",
+   "cost": 350,
    "shortDesc": "",
-   "longDesc": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/zBcAAOSwUnFZqKIN/$_20.JPG",
-   "photo": "",
+   "longDesc": "",
+   "photo": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/zBcAAOSwUnFZqKIN/$_20.JPG",
    "website": ""
  }
 ]
