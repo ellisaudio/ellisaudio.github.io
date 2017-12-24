@@ -374,7 +374,7 @@ $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(
       $.getJSON("ellisaudio.github.io/DB/Products/Audio/"+ii+".json").done(function(item) 
       {
         var html = "<div class='col-item'>";
-        html += "<img src='"+item.photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0   auto;max-width:100%;object-fit:contain;'>";
+        html += "<img src='"+item.photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span><h1>"+item.name+"</h1>";
         html += "<h2>$"+item.perDay+"/Day       $"+item.perWeek+"/Week</h2>";
         html += "<a href='"+item.website+"'>More Info</a>";
