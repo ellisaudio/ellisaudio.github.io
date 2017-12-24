@@ -501,7 +501,7 @@
           $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");google.script.run.withSuccessHandler(showItems).withUserObject("+'"'+page+'"'+").getItemsHtml("+'"'+page+'"'+", "+'"'+categories[ii][type]+'"'+")'>"+categories[ii][type]+"</button><br>");
         }
       }
-    }
+    });
     return;
   }
 </script>
