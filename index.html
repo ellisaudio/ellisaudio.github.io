@@ -392,7 +392,14 @@
     }
     else if(page.indexOf("Hire") != -1)
     {
-      $('#page-header').append("<br>"+category);
+      if(category == "Show All")
+      {
+        $('#filter-btn').empty().append("Filter by Category");
+      }
+      else
+      {
+        $('#filter-btn').empty().append(category);
+      }
       showHireItems(page, category);
       showFilter(page); 
     }
