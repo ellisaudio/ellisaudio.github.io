@@ -374,11 +374,10 @@ $(function()
 //   $('#items').empty().append("Something else");
 // });
 
-  $.getJSON("https://ellisaudio.github.io/DB/Products/1.json").done(function(item) 
+  $.getJSON("ellisaudio.github.io/DB/Products/1.json").done(function(item) 
   {
     $('#items').empty().append(item.name);
   });
-
 });
   
 
