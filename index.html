@@ -367,10 +367,10 @@
 $(function()
 {
 
-// $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
-//   {
-//     for(var ii = 1; ii <= type.numProducts; ii++)
-//     {
+$.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
+  {
+    for(var ii = 1; ii <= type.numProducts; ii++)
+    {
       $.getJSON("ellisaudio.github.io/DB/Products/Audio/1.json").done(function(item) 
       {
         var html = "<div class='col-item'>";
@@ -381,8 +381,8 @@ $(function()
         html += "</span></div>";
         $('#items').empty().append(html);
       });
-//     }
-//   });
+    }
+  });
 });
 </script>
 </body>
