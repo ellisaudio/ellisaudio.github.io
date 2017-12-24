@@ -367,14 +367,14 @@
     $('#items').empty()
 
     var page = getQueryVariable("page")
-    // if(page)
-    // {
+    if(page)
+    {
       updatePage(page, "Show All");
-    // }
-    // else
-    // {
-
-    // }
+    }
+    else
+    {
+      updatePage("Hire Packages", "Show All");
+    }
   });
 
   function updatePage(page, category)
