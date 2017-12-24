@@ -398,8 +398,8 @@
       }
       else
       {
-        $('#filter-btn').empty().append(category);
-        $('#filter-btn').html(&otimes);
+        $('#filter-btn').empty().append(&otimes + category);
+        // $('#filter-btn').html(&otimes);
       }
       showHireItems(page, category);
       showFilter(page); 
