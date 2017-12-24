@@ -407,10 +407,12 @@
     else if(page == "About Us")
     {
       showAboutUs();
+      $('#filter-btn').hide();
     }
     else
     {
       $('#page-header').empty().append("Home");
+      $('#filter-btn').hide();
     }
   }
 
