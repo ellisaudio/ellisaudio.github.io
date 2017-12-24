@@ -380,8 +380,19 @@
   function updatePage(page, category)
   {
     $('#page-header').empty().append(page);
-    showHireItems(page)
-  }
+    if(page.indexOf("Packages") != -1)
+    {
+      showPackages(page)
+    }
+    else if(page.indexOf("Hire") != -1)
+    {
+      showHireItems(page, category)
+    }
+    else if(page.indexOf("Sale") != -1)
+    {
+      showSaleItems(page)
+    }
+
 
   function getQueryVariable(variable)
   {
@@ -400,7 +411,7 @@
     return(false);
   }
 
-  function showPackagesItems(page)
+  function showSaleItem(page)
   {
     $('#items').empty();
     $('#page-header').empty().append(page);
@@ -408,7 +419,45 @@
     {
       for(var ii in items)
       {
-        var html = "<div class='col-item'>";
+        var html = "<div class='col-item' style='overflow:hidden;'>";
+        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<span><h1>"+items[ii].name+"</h1>";
+        html += "<h2>$"+items[ii].cost+"</h2>";
+        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        html += "</span></div>";
+        $('#items').append(html);
+      }
+    });
+  }
+
+  function showHireItems(page, category)
+  {
+    $('#items').empty();
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        var html = "<div class='col-item' style='overflow:hidden;'>";
+        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;>";
+        html += "<span><h1>"+items[ii].name+"</h1>";
+        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        html += "</span></div>";
+        $('#items').append(html);
+      }
+    });
+  }
+
+    function showPackages(page)
+  {
+    $('#items').empty();
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        var html = "<div class='col-item' style='max-height:580px;min-height:580px'>";
         html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span><h1>"+items[ii].name+"</h1>";
         html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -419,46 +468,8 @@
     });
   }
 
-  function showHireItems(page)
+  function showFilter(page) 
   {
-    $('#items').empty();
-    $('#page-header').empty().append(page);
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
-    {
-      for(var ii in items)
-      {
-        var html = "<div class='col-item'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
-        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
-        html += "</span></div>";
-        $('#items').append(html);
-      }
-    });
-  }
-
-    function showSaleItems(page)
-  {
-    $('#items').empty();
-    $('#page-header').empty().append(page);
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
-    {
-      for(var ii in items)
-      {
-        var html = "<div class='col-item'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
-        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
-        html += "</span></div>";
-        $('#items').append(html);
-      }
-    });
-  }
-
-  // function showFilter(page) 
-  // {
   //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(items) 
   //   {
   //     $('#filter-btn').show()
@@ -480,7 +491,7 @@
   //     }
   //   }
   //   return;
-  // }
+  }
 </script>
 </body>
 <footer>
