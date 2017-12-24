@@ -366,14 +366,11 @@
 // // The code in this function runs when the page is loaded.
 $(function()
 {
-
-$.getJSON("ellisaudio.github.io/conertcsv.json").done(function(items) 
 $('#items').empty()
-$.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
+$.getJSON("ellisaudio.github.io/conertcsv.json").done(function(items) 
   {
     for(var ii in items)
     {
-
         var html = "<div class='col-item'>";
         html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span><h1>"+items[ii].name+"</h1>";
@@ -381,7 +378,6 @@ $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(
         html += "<a href='"+items[ii].website+"'>More Info</a>";
         html += "</span></div>";
         $('#items').append(html);
-      });
     }
   });
 
