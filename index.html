@@ -313,20 +313,20 @@
   <nav id="nav" role="navigation" style="padding: 0;margin:0;">
 <!--	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>-->
-	<ul class="clearfix" style="padding: 0;margin:0;">
-      <li><button onclick="$('#items').empty().append('Loading...');showItems('Hire Packages');$('#filter-btn').hide()">Packages for Hire</button></li>
+	<ul class="clearfix" style="padding: 0;margin:0;"
+      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All');$('#filter-btn').hide()">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
 		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');showItems('Audio Hire');showFilter('Audio Hire');">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');showItems('Visual Hire');showFilter('Visual Hire');">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');showItems('Lighting Hire');showFilter('Lighting Hire');">Lighting Equipment</button></li>
+	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All');showFilter('Audio Hire');">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All');showFilter('Visual Hire');">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All');showFilter('Lighting Hire');">Lighting Equipment</button></li>
 		</ul>
 	  </li>
       <li>
-	    <button onclick="$('#items').empty().append('Loading...');showItems('For Sale');$('#filter-btn').hide()">Equipment for Sale</button>
+	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All');$('#filter-btn').hide()">Equipment for Sale</button>
 	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');showItems('Contact Us');$('#filter-btn').hide()">About Us</button>
+	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Abous Us', 'Show All');$('#filter-btn').hide()">About Us</button>
   	  </li>
 	</ul>
   </nav>
@@ -367,16 +367,21 @@
     $('#items').empty()
 
     var page = getQueryVariable("page")
-    $('#page-header').empty().append(page);
     // if(page)
     // {
-      showItems(page);
+      updatePage(page, "Show All");
     // }
     // else
     // {
 
     // }
   });
+
+  function updatePage(page, category)
+  {
+    $('#page-header').empty().append(page);
+
+  }
 
   function getQueryVariable(variable)
   {
@@ -395,7 +400,45 @@
     return(false);
   }
 
-  function showItems(page)
+  function showPackagesItems(page)
+  {
+    $('#items').empty();
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        var html = "<div class='col-item'>";
+        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<span><h1>"+items[ii].name+"</h1>";
+        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        html += "</span></div>";
+        $('#items').append(html);
+      }
+    });
+  }
+
+  function showHireItems(page)
+  {
+    $('#items').empty();
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        var html = "<div class='col-item'>";
+        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<span><h1>"+items[ii].name+"</h1>";
+        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        html += "</span></div>";
+        $('#items').append(html);
+      }
+    });
+  }
+
+    function showSaleItems(page)
   {
     $('#items').empty();
     $('#page-header').empty().append(page);
