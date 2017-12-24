@@ -382,15 +382,15 @@
     $('#page-header').empty().append(page);
     if(page.indexOf("Packages") != -1)
     {
-      showPackages(page)
-    }
-    else if(page.indexOf("Hire") != -1)
-    {
-      showHireItems(page, category)
+      showHireItems(page)
     }
     else if(page.indexOf("Sale") != -1)
     {
       showSaleItems(page)
+    }
+    else if(page.indexOf("Hire") != -1)
+    {
+      showHireItems(page, category)
     }
   }
 
@@ -491,7 +491,7 @@
   //       }
   //     }
   //   }
-  //   return;
+    return;
   }
 </script>
 </body>
