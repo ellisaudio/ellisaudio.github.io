@@ -365,36 +365,36 @@
 $(function()
 {
 $('#items').empty()
-$.getJSON("ellisaudio.github.io/DB/Products/Audio Hire.json").done(function(items) 
+
+var page = getQueryVariable("page")
+  if(!page)
   {
-    for(var ii in items)
+  $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
     {
-        var html = "<div class='col-item'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
-        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
-        html += "</span></div>";
-        $('#items').append(html);
+      for(var ii in items)
+      {
+          var html = "<div class='col-item'>";
+          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span><h1>"+items[ii].name+"</h1>";
+          html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          html += "</span></div>";
+          $('#items').append(html);
+      }
     }
   });
 
-// $.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
-//   {
-//     for(var ii = 1; ii <= type.numProducts; ii++)
-//     {
-//       $.getJSON("ellisaudio.github.io/DB/Products/Audio/"+ii+".json").done(function(item) 
-//       {
-//         var html = "<div class='col-item'>";
-//         html += "<img src='"+item.photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-//         html += "<span><h1>"+item.name+"</h1>";
-//         html += "<h2>$"+item.perDay+"/Day       $"+item.perWeek+"/Week</h2>";
-//         html += "<a href='"+item.website+"'>More Info</a>";
-//         html += "</span></div>";
-//         $('#items').empty().append(html);
-//       });
-//     }
-//   });
+  function getQueryVariable(variable)
+  {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) 
+    {
+      var pair = vars[i].split("=");
+      if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+  }
 });
 </script>
 </body>
