@@ -374,7 +374,7 @@ $(function()
 //   $('#items').empty().append("Something else");
 // });
 
-  $.getJSON("/DB/Products/1.json").done(function(item) 
+  $.getJSON("DB/Products/1.json").done(function(item) 
   {
     $('#items').empty().append(item.name);
   });
