@@ -398,7 +398,8 @@
       }
       else
       {
-        $('#filter-btn').empty().append(category).html("&otimes");
+        $('#filter-btn').empty().append(category);
+        $('#filter-btn').empty().html("&otimes");
       }
       showHireItems(page, category);
       showFilter(page); 
