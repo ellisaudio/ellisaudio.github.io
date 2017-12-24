@@ -314,19 +314,19 @@
 <!--	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>-->
 	<ul class="clearfix" style="padding: 0;margin:0;">
-      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All');$('#filter-btn').hide()">Packages for Hire</button></li>
+      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All');">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
 		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All');showFilter('Audio Hire');">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All');showFilter('Visual Hire');">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All');showFilter('Lighting Hire');">Lighting Equipment</button></li>
+	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All');">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All');">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All');">Lighting Equipment</button></li>
 		</ul>
 	  </li>
       <li>
-	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All');$('#filter-btn').hide()">Equipment for Sale</button>
+	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All');">Equipment for Sale</button>
 	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Abous Us', 'Show All');$('#filter-btn').hide()">About Us</button>
+	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Abous Us', 'Show All');">About Us</button>
   	  </li>
 	</ul>
   </nav>
@@ -382,15 +382,18 @@
     $('#page-header').empty().append(page);
     if(page == "Hire Packages")
     {
-      showPackages(page)
+      showPackages(page);
+      $('#filter-btn').hide();
     }
     else if(page == "For Sale")
     {
-      showSaleItems(page)
+      showSaleItems(page);
+      $('#filter-btn').hide();
     }
     else if(page.indexOf("Hire") != -1)
     {
-      showHireItems(page, category)
+      showHireItems(page, category);
+      showFilter(page); 
     }
     else
     {
@@ -479,26 +482,26 @@
 
   function showFilter(page) 
   {
-  //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(items) 
-  //   {
-  //     $('#filter-btn').show()
-  //     $('#filter-options').empty();
-  //     if(page == "Audio Hire"){var type = 0;}
-  //     else if(page == "Visual Hire"){var type = 1;}
-  //     else if(page == "Lighting Hire"){var type = 2;}
-  //     else{$('#dropbtn').hide();return false;}
-  //     for(var ii = 1; ii < categories.length; ii++)
-  //     {
-  //       if((categories[ii][type] == "")||(categories[ii][type] == null)||(categories[ii][type] == undefined))
-  //       {
-  //         return;
-  //       }
-  //       else
-  //       {
-  //         $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");google.script.run.withSuccessHandler(showItems).withUserObject("+'"'+page+'"'+").getItemsHtml("+'"'+page+'"'+", "+'"'+categories[ii][type]+'"'+")'>"+categories[ii][type]+"</button><br>");
-  //       }
-  //     }
-  //   }
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(items) 
+    {
+      $('#filter-btn').show()
+      $('#filter-options').empty();
+      if(page == "Audio Hire"){var type = 0;}
+      else if(page == "Visual Hire"){var type = 1;}
+      else if(page == "Lighting Hire"){var type = 2;}
+      else{$('#dropbtn').hide();return false;}
+      for(var ii = 1; ii < categories.length; ii++)
+      {
+        if((categories[ii][type] == "")||(categories[ii][type] == null)||(categories[ii][type] == undefined))
+        {
+          return;
+        }
+        else
+        {
+          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");google.script.run.withSuccessHandler(showItems).withUserObject("+'"'+page+'"'+").getItemsHtml("+'"'+page+'"'+", "+'"'+categories[ii][type]+'"'+")'>"+categories[ii][type]+"</button><br>");
+        }
+      }
+    }
     return;
   }
 </script>
