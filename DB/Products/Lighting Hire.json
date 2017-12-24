@@ -1,0 +1,62 @@
+[
+ {
+   "name": "Enttec Open DMX USB",
+   "catelog": 1,
+   "category": "DMX",
+   "quantity": 1,
+   "perDay": "$5.00",
+   "perWeek": "$15.00",
+   "shortDesc": "",
+   "longDesc": "",
+   "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900253_911959725629514_4497502121328588875_n.png?oh=7eb48735a2ddc137fa5eab807f593e05&oe=5AC8FC6B",
+   "website": "https://www.google.com/url?q=https%3A%2F%2Fwww.enttec.com%2Fau%2Fproducts%2Fcontrols%2Fdmx-usb%2Fopen-dmx-usb%2F&sa=D&sntz=1&usg=AFQjCNExNN_o7eFgeFewSa-6S8Wi9KOZXQ"
+ },
+ {
+   "name": "Donner 2.4 GHz Wireless Transmitter",
+   "catelog": 2,
+   "category": "DMX",
+   "quantity": 1,
+   "perDay": "$5.00",
+   "perWeek": "$15.00",
+   "shortDesc": "",
+   "longDesc": "",
+   "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900098_911959612296192_149683356164578170_n.jpg?oh=6e7ac9d767077ae47e757c8d2e83c0dd&oe=5A898C76",
+   "website": "https://www.google.com/url?q=https%3A%2F%2Fwww.donnerdeal.com%2Fcollections%2Fdmx-wireless-transmitter%2Fproducts%2Fdonner-2-4g-dmx512-wireless-transmitter-metal-unit-us-uk-eu-plug&sa=D&sntz=1&usg=AFQjCNFgMIqKV0AKVs6t0DVxb0pnt50KsQ"
+ },
+ {
+   "name": "Donner 2.4 GHz Wireless Receiver",
+   "catelog": 3,
+   "category": "DMX",
+   "quantity": 1,
+   "perDay": "$5.00",
+   "perWeek": "$15.00",
+   "shortDesc": "",
+   "longDesc": "",
+   "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24991250_911959618962858_5943246244119045650_n.jpg?oh=bc033c69a52c7876ce520deec87d1aa3&oe=5AD6D391",
+   "website": "https://www.google.com/url?q=https%3A%2F%2Fwww.donnerdeal.com%2Fcollections%2Fdmx-wireless-receiver%2Fproducts%2Fdonner-2-4g-dmx512-wireless-receiver-metal-unit-us-uk-eu-plug&sa=D&sntz=1&usg=AFQjCNEYM4fw2yZLIdmk0QYr9oOCLB6Nfg"
+ },
+ {
+   "name": "DMX Terminator",
+   "catelog": 4,
+   "category": "DMX",
+   "quantity": 2,
+   "perDay": "$1.00",
+   "perWeek": "$3.00",
+   "shortDesc": "",
+   "longDesc": "",
+   "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24991462_911959625629524_1223968657022282155_n.jpg?oh=5606ab3b125bb9388e094903ef1102f1&oe=5A8C32F0",
+   "website": ""
+ },
+ {
+   "name": "3 pin - 5 pin Adaptor",
+   "catelog": 5,
+   "category": "DMX",
+   "quantity": 1,
+   "perDay": "$1.00",
+   "perWeek": "$3.00",
+   "shortDesc": "",
+   "longDesc": "",
+   "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24909761_911959665629520_4256677640998606364_n.jpg?oh=ccee877dc1bc8547281d559207186b4e&oe=5AD4D71E",
+   "website": ""
+ }
+]
