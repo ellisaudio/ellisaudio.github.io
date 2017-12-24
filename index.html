@@ -404,6 +404,10 @@
       showHireItems(page, category);
       showFilter(page); 
     }
+    else if(page == "About Us")
+    {
+      showAboutUs();
+    }
     else
     {
       $('#page-header').empty().append("Home");
@@ -426,6 +430,16 @@
         }
     }
     return(false);
+  }
+
+  function showAboutUs()
+  {
+    $('#items').empty();
+    $('#page-header').empty().append("About Us");
+    $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
+    {
+      $('#items').append(items.content);
+    });
   }
 
   function showSaleItems(page)
