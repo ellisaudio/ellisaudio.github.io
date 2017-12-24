@@ -398,7 +398,7 @@
       }
       else
       {
-        $('#filter-btn').empty().append("<p color='red'>&otimes </p> " + category);
+        $('#filter-btn').empty().html("&otimes").append(category);
       }
       showHireItems(page, category);
       showFilter(page); 
