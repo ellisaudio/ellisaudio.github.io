@@ -336,7 +336,7 @@
     <div id="body">
   <div class="row" style="text-align:center; color:white;margin:auto;"> 
   <div class="col-12">
-  <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;"><?=page?></h1>
+  <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;"></h1>
   </div>
   </div>
   <div class="row">
@@ -345,7 +345,7 @@
   <div class="col-5" /*style="color:white;padding:0;margin:0;width:85%;min-height:0;margin-top:0.5%;margin-bottom:0.5%;"*/>
   
 <div class="dropdown">
-  <button class="dropbtn" id="filter-btn" style="display:none;">Filter</button>
+  <button class="dropbtn" id="filter-btn" style="display:none;min-width: 100px;">Filter by Category</button>
   <div id="filter-options" class="dropdown-content">
     <a href="#">Loading...</a>
   </div>
@@ -398,7 +398,7 @@
       }
       else
       {
-        $('#filter-btn').empty().append("&otimes  " + category);
+        $('#filter-btn').empty().append("<p color="red">&otimes </p> " + category);
       }
       showHireItems(page, category);
       showFilter(page); 
