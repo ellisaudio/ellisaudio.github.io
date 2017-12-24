@@ -380,11 +380,11 @@
   function updatePage(page, category)
   {
     $('#page-header').empty().append(page);
-    if(page.indexOf("Packages") != -1)
+    if(page == "Hire Packages")
     {
       showHireItems(page)
     }
-    else if(page.indexOf("Sale") != -1)
+    else if(page == "For Sale")
     {
       showSaleItems(page)
     }
