@@ -364,9 +364,10 @@
   // The code in this function runs when the page is loaded.
   $(function()
   {
-  $('#items').empty()
+    $('#items').empty()
 
     var page = getQueryVariable("page")
+    $('#page-header').empty().append(page);
     // if(page)
     // {
       showItems(page);
@@ -389,49 +390,49 @@
     return(false);
   }
 
-  function showItems(page)
-  {
-    $('#items').empty();
-    $('#page-header').empty().append(page);
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
-    {
-      for(var ii in items)
-      {
-        var html = "<div class='col-item'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
-        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
-        html += "</span></div>";
-        $('#items').append(html);
-      }
-    });
-  }
+  // function showItems(page)
+  // {
+  //   $('#items').empty();
+  //   $('#page-header').empty().append(page);
+  //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+  //   {
+  //     for(var ii in items)
+  //     {
+  //       var html = "<div class='col-item'>";
+  //       html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+  //       html += "<span><h1>"+items[ii].name+"</h1>";
+  //       html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+  //       html += "<a href='"+items[ii].website+"'>More Info</a>";
+  //       html += "</span></div>";
+  //       $('#items').append(html);
+  //     }
+  //   });
+  // }
 
-  function showFilter(page) 
-  {
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(items) 
-    {
-      $('#filter-btn').show()
-      $('#filter-options').empty();
-      if(page == "Audio Hire"){var type = 0;}
-      else if(page == "Visual Hire"){var type = 1;}
-      else if(page == "Lighting Hire"){var type = 2;}
-      else{$('#dropbtn').hide();return false;}
-      for(var ii = 1; ii < categories.length; ii++)
-      {
-        if((categories[ii][type] == "")||(categories[ii][type] == null)||(categories[ii][type] == undefined))
-        {
-          return;
-        }
-        else
-        {
-          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");google.script.run.withSuccessHandler(showItems).withUserObject("+'"'+page+'"'+").getItemsHtml("+'"'+page+'"'+", "+'"'+categories[ii][type]+'"'+")'>"+categories[ii][type]+"</button><br>");
-        }
-      }
-    }
-    return;
-  }
+  // function showFilter(page) 
+  // {
+  //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(items) 
+  //   {
+  //     $('#filter-btn').show()
+  //     $('#filter-options').empty();
+  //     if(page == "Audio Hire"){var type = 0;}
+  //     else if(page == "Visual Hire"){var type = 1;}
+  //     else if(page == "Lighting Hire"){var type = 2;}
+  //     else{$('#dropbtn').hide();return false;}
+  //     for(var ii = 1; ii < categories.length; ii++)
+  //     {
+  //       if((categories[ii][type] == "")||(categories[ii][type] == null)||(categories[ii][type] == undefined))
+  //       {
+  //         return;
+  //       }
+  //       else
+  //       {
+  //         $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");google.script.run.withSuccessHandler(showItems).withUserObject("+'"'+page+'"'+").getItemsHtml("+'"'+page+'"'+", "+'"'+categories[ii][type]+'"'+")'>"+categories[ii][type]+"</button><br>");
+  //       }
+  //     }
+  //   }
+  //   return;
+  // }
 </script>
 </body>
 <footer>
