@@ -366,9 +366,8 @@ $(function()
 {
 $('#items').empty()
 
-// var page = getQueryVariable("page")
-//   if(!page)
-//   {
+var page = getQueryVariable("page")
+
   $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
     {
       for(var ii in items)
@@ -382,7 +381,6 @@ $('#items').empty()
           $('#items').append(html);
       }
   });
-  // }
 });
 
   function getQueryVariable(variable)
