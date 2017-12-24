@@ -376,10 +376,7 @@ $(function()
 
   $.getJSON("ellisaudio.github.io/DB/Products/1.json").done(function(item) 
   {
-    $('#items').empty().append(item.name);
 
-    function genHireItem(item)
-{ 
   var html = "<div class='col-item'>";
   html += "<img src='"+item.photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
   html += "<span><h1>"+item.name+"</h1>";
@@ -387,7 +384,6 @@ $(function()
   html += "<a href='"+item.website+"'>More Info</a>";
   html += "</span></div>";
   $('#items').empty().append(html);
-}
   });
 });
   
