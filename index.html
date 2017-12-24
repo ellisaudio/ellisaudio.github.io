@@ -366,8 +366,13 @@
 // // The code in this function runs when the page is loaded.
 $(function()
 {
+<<<<<<< HEAD
 
 $.getJSON("ellisaudio.github.io/conertcsv.json").done(function(items) 
+=======
+$('#items').empty()
+$.getJSON("ellisaudio.github.io/DB/Products/Audio/Products.json").done(function(type) 
+>>>>>>> f0058db31145a8d7908416bba696ab794fa85189
   {
     for(var ii in items)
     {
@@ -378,7 +383,12 @@ $.getJSON("ellisaudio.github.io/conertcsv.json").done(function(items)
         html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
         html += "<a href='"+items[ii].website+"'>More Info</a>";
         html += "</span></div>";
+<<<<<<< HEAD
         $('#items').empty().append(html);
+=======
+        $('#items').append(html);
+      });
+>>>>>>> f0058db31145a8d7908416bba696ab794fa85189
     }
   });
 
