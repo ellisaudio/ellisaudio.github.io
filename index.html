@@ -447,13 +447,29 @@
     {
       for(var ii in items)
       {
-        var html = "<div class='col-item' style='overflow:hidden;'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
-        html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
-        html += "</span></div>";
-        $('#items').append(html);
+        if(category == "Show All")
+        {
+          var html = "<div class='col-item' style='overflow:hidden;'>";
+          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span><h1>"+items[ii].name+"</h1>";
+          html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          html += "</span></div>";
+          $('#items').append(html);
+        }
+        else
+        {
+          if(items[ii].category == category)
+          {
+            var html = "<div class='col-item' style='overflow:hidden;'>";
+            html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+            html += "<span><h1>"+items[ii].name+"</h1>";
+            html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+            html += "<a href='"+items[ii].website+"'>More Info</a>";
+            html += "</span></div>";
+            $('#items').append(html);
+          }
+        }
       }
     });
   }
