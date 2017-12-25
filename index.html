@@ -443,7 +443,7 @@
     $('#page-header').empty().append("About Us");
     $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
     {
-      $('#items').append(items.content);
+      $('#items').append("<div class='col-12' style='background-color:black;color:white;min-height:200px;text-align:center;'>"+items.content+"</div>");
     });
   }
 
