@@ -373,7 +373,7 @@
     }
     else
     {
-      updatePage("Home", "");
+      updatePage("Home", "Show All");
     }
   });
 
@@ -415,7 +415,7 @@
       $('#filter-btn').hide();
       $.getJSON("ellisaudio.github.io/Home.json").done(function(home) 
       {
-        $('#items').empty().append("<div class="col-10" style="background-color:black;color:white;">"+home.content+"</div>");
+        $('#items').empty().append("<div class='col-10' style='background-color:black;color:white;'>"+home.content+"</div>");
       });
     }
   }
