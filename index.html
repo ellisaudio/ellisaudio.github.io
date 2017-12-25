@@ -373,7 +373,7 @@
     }
     else
     {
-      updatePage("Hire Packages", "Show All");
+      updatePage("Home", "");
     }
   });
 
@@ -413,9 +413,12 @@
     {
       $('#page-header').empty().append("Home");
       $('#filter-btn').hide();
+      $.getJSON("ellisaudio.github.io/Home.json").done(function(home) 
+      {
+        $('#items').empty().append("<div class="col-10" style="background-color:black;color:white;">"+home.content+"</div>");
+      });
     }
   }
-
 
   function getQueryVariable(variable)
   {
