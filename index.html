@@ -382,7 +382,7 @@
     $('#page-header').empty().append(page);
     if(page == "Hire Packages")
     {
-      showPackages(page);
+      showPackages(page, true);
       $('#filter-btn').hide();
     }
     else if(page == "For Sale")
@@ -417,6 +417,7 @@
       {
         $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+home.content+"</div>");
       });
+      showPackages(page, false);
     }
   }
 
@@ -501,9 +502,12 @@
     });
   }
 
-    function showPackages(page)
+    function showPackages(page, empty)
   {
-    $('#items').empty();
+    if (empty)
+    {
+      $('#items').empty();
+    }
     $('#page-header').empty().append(page);
     $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
     {
