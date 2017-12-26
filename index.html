@@ -314,19 +314,19 @@
 <!--	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>-->
 	<ul class="clearfix" style="padding: 0;margin:0;">
-      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'All');">Packages for Hire</button></li>
+      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Name');">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
 		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'All');">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'All');">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'All');">Lighting Equipment</button></li>
+	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Name');">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Name');">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Name');">Lighting Equipment</button></li>
 		</ul>
 	  </li>
       <li>
-	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'All');">Equipment for Sale</button>
+	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Name');">Equipment for Sale</button>
 	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'All');">About Us</button>
+	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Name');">About Us</button>
   	  </li>
 	</ul>
   </nav>
@@ -351,7 +351,7 @@
   </div>
 </div>
 <div class="dropdown">
-  <button class="dropbtn" id="sort-btn" style="display:none;">Sort</button>
+  <button class="dropbtn" id="sort-btn" style="display:none;">Sorted by</button>
   <div id="sort-options" class="dropdown-content">
     <a href="#">Loading...</a>
   </div>
@@ -614,7 +614,7 @@
       var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Category"];
       for(var ii in sortoptions)
       {
-        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sort by "+sortoptions[ii]+"</button><br>");
+        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button><br>");
       }
     return;
   }
