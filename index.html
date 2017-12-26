@@ -372,15 +372,16 @@
   {
     $('#items').empty()
 
-    var page = getQueryVariable("page")
-    if(page)
-    {
-      updatePage(page, "Show All", "All");
-    }
-    else
-    {
-      updatePage("Home", "Show All", "All");
-    }
+    // var page = getQueryVariable("page")
+    $('#page-header').empty().append("test");
+    // if(page)
+    // {
+    //   updatePage(page, "Show All", "All");
+    // }
+    // else
+    // {
+    //   updatePage("Home", "Show All", "All");
+    // }
   });
 
   function updatePage(page, category, sort)
