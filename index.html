@@ -296,7 +296,7 @@
   <div class='row' style='background-color:white'>
   <div class='col-2' style='margin: 0.5% 0;padding: 15px 0;'></div>
   <div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
-  <a href="" onclick='updatePage("Home", "Show All")'><img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;'></a>
+  <a href="" onclick='updatePage("Home", "Show All", "")'><img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;'></a>
   </div>
   <div class='col-6' style='margin: 0 0.5%;padding: 0 15px;max-height:10%;min-height:10%;'>
   <h1 style='font-size:200%;float:left;margin-top:5%;'>Ellis Audio</h1>
@@ -314,19 +314,19 @@
 <!--	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>-->
 	<ul class="clearfix" style="padding: 0;margin:0;">
-      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All');">Packages for Hire</button></li>
+      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', '');">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
 		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All');">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All');">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All');">Lighting Equipment</button></li>
+	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', '');">Audio Equipment</button></li><br>		
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', '');">Display Equipment</button></li><br>
+		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', '');">Lighting Equipment</button></li>
 		</ul>
 	  </li>
       <li>
-	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All');">Equipment for Sale</button>
+	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', '');">Equipment for Sale</button>
 	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All');">About Us</button>
+	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', '');">About Us</button>
   	  </li>
 	</ul>
   </nav>
@@ -375,17 +375,17 @@
     var page = getQueryVariable("page")
     if(page)
     {
-      updatePage(page, "Show All");
+      updatePage(page, "Show All", "");
     }
     else
     {
-      updatePage("Home", "Show All");
+      updatePage("Home", "Show All", "");
     }
   });
 
-  function updatePage(page, category)
+  function updatePage(page, category, sort)
   {
-    // $('#page-header').empty().append(page);
+    $('#page-header').empty().append(page);
     if(page == "Hire Packages")
     {
       showPackages(page, true);
@@ -405,7 +405,6 @@
       else
       {
         $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
-        // $('#filter-btn').html(&otimes);
       }
       showHireItems(page, category);
       showFilter(page); 
