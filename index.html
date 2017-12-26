@@ -391,41 +391,41 @@
       showPackages(page, true);
       $('#filter-btn').hide();
     }
-    else if(page == "For Sale")
-    {
-      showSaleItems(page);
-      $('#filter-btn').hide();
-    }
-    else if(page.indexOf("Hire") != -1)
-    {
-      if(category == "Show All")
-      {
-        $('#filter-btn').empty().append("Filter by Category");
-      }
-      else
-      {
-        $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
-      }
-      showHireItems(page, category);
-      showFilter(page, sort); 
-    }
-    else if(page == "About Us")
-    {
-      showAboutUs();
-      $('#filter-btn').hide();
-    }
-    else
-    {
-      $('#page-header').empty().append("Home");
-      $('#filter-btn').hide();
-      $.getJSON("ellisaudio.github.io/Home.json").done(function(home) 
-      {
-        $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+home.content+"</div>");
-      });
-      // $('#items').empty.append('<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+    // else if(page == "For Sale")
+    // {
+    //   showSaleItems(page);
+    //   $('#filter-btn').hide();
+    // }
+    // else if(page.indexOf("Hire") != -1)
+    // {
+    //   if(category == "Show All")
+    //   {
+    //     $('#filter-btn').empty().append("Filter by Category");
+    //   }
+    //   else
+    //   {
+    //     $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
+    //   }
+    //   showHireItems(page, category);
+    //   showFilter(page, sort); 
+    // }
+    // else if(page == "About Us")
+    // {
+    //   showAboutUs();
+    //   $('#filter-btn').hide();
+    // }
+    // else
+    // {
+    //   $('#page-header').empty().append("Home");
+    //   $('#filter-btn').hide();
+    //   $.getJSON("ellisaudio.github.io/Home.json").done(function(home) 
+    //   {
+    //     $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+home.content+"</div>");
+    //   });
+    //   // $('#items').empty.append('<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
 
-      showPackages(page, false);
-    }
+    //   //showPackages(page, false);
+    // }
   }
 
   function getQueryVariable(variable)
@@ -511,7 +511,7 @@
 
     function showPackages(page, empty)
   {
-    if (empty)
+    if (empty == true)
     {
       $('#items').empty();
     }
