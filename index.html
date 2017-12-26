@@ -391,11 +391,11 @@
       showPackages(page, true);
       $('#filter-btn').hide();
     }
-    // else if(page == "For Sale")
-    // {
-    //   showSaleItems(page);
-    //   $('#filter-btn').hide();
-    // }
+    else if(page == "For Sale")
+    {
+      showSaleItems(page);
+      $('#filter-btn').hide();
+    }
     else if(page.indexOf("Hire") != -1)
     {
       if(category == "Show All")
@@ -455,24 +455,24 @@
   //   });
   // }
 
-  // function showSaleItems(page)
-  // {
-  //   $('#items').empty();
-  //   $('#page-header').empty().append(page);
-  //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
-  //   {
-  //     for(var ii in items)
-  //     {
-  //       var html = "<div class='col-item' style='overflow:hidden;'>";
-  //       html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-  //       html += "<span><h1>"+items[ii].name+"</h1>";
-  //       html += "<h2>$"+items[ii].cost+"</h2>";
-  //       html += "<a href='"+items[ii].website+"'>More Info</a>";
-  //       html += "</span></div>";
-  //       $('#items').append(html);
-  //     }
-  //   });
-  // }
+  function showSaleItems(page)
+  {
+    $('#items').empty();
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        var html = "<div class='col-item' style='overflow:hidden;'>";
+        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<span><h1>"+items[ii].name+"</h1>";
+        html += "<h2>$"+items[ii].cost+"</h2>";
+        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        html += "</span></div>";
+        $('#items').append(html);
+      }
+    });
+  }
 
   function showHireItems(page, category)
   {
