@@ -396,19 +396,19 @@
     //   showSaleItems(page);
     //   $('#filter-btn').hide();
     // }
-    // else if(page.indexOf("Hire") != -1)
-    // {
-    //   if(category == "Show All")
-    //   {
-    //     $('#filter-btn').empty().append("Filter by Category");
-    //   }
-    //   else
-    //   {
-    //     $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
-    //   }
-    //   showHireItems(page, category);
-    //   showFilter(page, sort); 
-    // }
+    else if(page.indexOf("Hire") != -1)
+    {
+      if(category == "Show All")
+      {
+        $('#filter-btn').empty().append("Filter by Category");
+      }
+      else
+      {
+        $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
+      }
+      showHireItems(page, category);
+      showFilter(page, sort); 
+    }
     // else if(page == "About Us")
     // {
     //   showAboutUs();
@@ -509,31 +509,31 @@
     });
   }
 
-  //   function showPackages(page, empty)
-  // {
-  //   if (empty == true)
-  //   {
-  //     $('#items').empty();
-  //   }
-  //   $('#page-header').empty().append(page);
-  //   $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
-  //   {
-  //     for(var ii in items)
-  //     {
-  //       if(!items[ii].hide)
-  //       {
-  //         var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
-  //         html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-  //         html += "<span><h1>"+items[ii].name+"</h1>";
-  //         html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-  //         html += "<p>"+items[ii].shortDesc+"</p>";
-  //         html += "<a href='"+items[ii].website+"'>More Info</a>";
-  //         html += "</span></div>";
-  //         $('#items').append(html);
-  //       }
-  //     }
-  //   });
-  // }
+    function showPackages(page, empty)
+  {
+    if (empty == true)
+    {
+      $('#items').empty();
+    }
+    $('#page-header').empty().append(page);
+    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        if(!items[ii].hide)
+        {
+          var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
+          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span><h1>"+items[ii].name+"</h1>";
+          html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+          html += "<p>"+items[ii].shortDesc+"</p>";
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          html += "</span></div>";
+          $('#items').append(html);
+        }
+      }
+    });
+  }
 
   // function showFilter(page, sort) 
   // {
