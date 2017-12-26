@@ -408,7 +408,7 @@
       }
       if((sort == "Show All")||sort == "All")
       {
-        $('#sort-btn').empty().append("Sort");
+        $('#sort-btn').empty().append("Sort by Name");
       }
       else
       {
@@ -576,7 +576,7 @@
       var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Type"];
       for(var ii in sortoptions)
       {
-        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>"+sortoptions[ii]+"</button><br>");
+        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sort by "+sortoptions[ii]+"</button><br>");
       }
     return;
   }
