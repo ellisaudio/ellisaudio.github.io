@@ -501,20 +501,14 @@
       }
       else if(sort == "Price Low-High")
       {
-        items.sort( function(a, b) {
-          a = a.perDay.toLowerCase();
-          b = b.perDay.toLowerCase();
-
-          return a < b ? -1 : a > b ? 1 : 0;
+        items.sort(function(a, b) {
+          return parseFloat(a.perDay) - parseFloat(b.perDay);
         });
       }
       else if(sort == "Price High-Low")
       {
-        items.sort( function(a, b) {
-          a = a.name.toLowerCase();
-          b = b.name.toLowerCase();
-
-          return a < b ? -1 : a > b ? 1 : 0;
+        items.sort(function(a, b) {
+          return parseFloat(a.perDay) - parseFloat(b.perDay);
         });
         items.reverse();
       }
