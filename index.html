@@ -449,10 +449,10 @@
   {
     $('#items').empty();
     $('#page-header').empty().append("About Us");
-    // $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
-    // {
-    //   $('#items').append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
-    // });
+    $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
+    {
+      $('#items').append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
+    });
   }
 
   function showSaleItems(page)
