@@ -571,12 +571,12 @@
   function showSort(page, category) 
   {
       $('#sort-btn').show()
-      // $('#sort-options').empty();
-      // var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Type"];
-      // for(ii in sortoptions)
-      // {
+      $('#sort-options').empty();
+      var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Type"];
+      for(var ii in sortoptions)
+      {
       //   // $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>"+sortoptions[ii]+"</button><br>");
-      // }
+      }
     return;
   }
 </script>
