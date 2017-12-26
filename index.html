@@ -406,6 +406,14 @@
       {
         $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
       }
+      if(sort == "Show All")
+      {
+        $('#sort-btn').empty().append("Sort");
+      }
+      else
+      {
+        $('#sort-btn').empty().append(sort + ' <span style="color:red">&otimes;</span>');
+      }
       showHireItems(page, category);
       showFilter(page, sort); 
     }
@@ -414,18 +422,18 @@
       showAboutUs();
       $('#filter-btn').hide();
     }
-    // else
-    // {
-    //   $('#page-header').empty().append("Home");
-    //   $('#filter-btn').hide();
+    else
+    {
+      $('#page-header').empty().append("Home");
+      $('#filter-btn').hide();
     //   $.getJSON("ellisaudio.github.io/Home.json").done(function(home) 
     //   {
     //     $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+home.content+"</div>");
     //   });
     //   // $('#items').empty.append('<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
 
-    //   //showPackages(page, false);
-    // }
+      showPackages(page, false);
+    }
   }
 
   function getQueryVariable(variable)
@@ -567,7 +575,7 @@
       var sort-options = ["Name", "Price Low-High", "Price High-Low", "Type"];
       for(ii in sort-options)
       {
-        $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sort-options[ii]+'"'+");showfilter("+'"'+page+'", "'+sort-options[ii]+'"'+");'>"+sort-options[ii]+"</button><br>");
+        // $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sort-options[ii]+'"'+");showfilter("+'"'+page+'", "'+sort-options[ii]+'"'+");'>"+sort-options[ii]+"</button><br>");
       }
     return;
   }
