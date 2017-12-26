@@ -406,9 +406,9 @@
       {
         $('#filter-btn').empty().append(category + ' <span style="color:red">&otimes;</span>');
       }
-      if((sort == "Show All")||sort == "All")
+      if((sort == "Show All")||(sort == "All")||(sort == Name))
       {
-        $('#sort-btn').empty().append("Sort by Name");
+        $('#sort-btn').empty().append("Sorted by Name");
       }
       else
       {
@@ -489,6 +489,43 @@
     $('#page-header').empty().append(page);
     $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
     {
+      if(sort == "Name")
+      {
+        items.sort( function(a, b) {
+          a = a.name.toLowerCase();
+          b = b.name.toLowerCase();
+
+          return a < b ? -1 : a > b ? 1 : 0;
+        });
+      }
+      else if(sort == "Price Low-High")
+      {
+        items.sort( function(a, b) {
+          a = a.perDay.toLowerCase();
+          b = b.perDay.toLowerCase();
+
+          return a < b ? -1 : a > b ? 1 : 0;
+        });
+      }
+      else if(sort == "Price High-Low")
+      {
+        items.sort( function(a, b) {
+          a = a.name.toLowerCase();
+          b = b.name.toLowerCase();
+
+          return a < b ? -1 : a > b ? 1 : 0;
+        });
+        items.reverse();
+      }
+      else if(sort == "Category")
+      {
+        items.sort( function(a, b) {
+          a = a.category.toLowerCase();
+          b = b.category.toLowerCase();
+
+          return a < b ? -1 : a > b ? 1 : 0;
+        });
+      }
       for(var ii in items)
       {
         if(category == "Show All")
@@ -573,7 +610,7 @@
   {
       $('#sort-btn').show()
       $('#sort-options').empty();
-      var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Type"];
+      var sortoptions = ["Name", "Price Low-High", "Price High-Low", "Category"];
       for(var ii in sortoptions)
       {
         $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sort by "+sortoptions[ii]+"</button><br>");
