@@ -530,7 +530,7 @@
     });
   }
 
-  function showFilter(page) 
+  function showFilter(page, sort) 
   {
     $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(categories) 
     {
@@ -548,10 +548,23 @@
         }
         else
         {
-          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+")'>"+categories[ii].category+"</button><br>");
+          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+page+", "+categories[ii].category+", "+sort+");showSort("+page+", "+categories[ii].category+");'>"+categories[ii].category+"</button><br>");
         }
       }
     });
+    return;
+  }
+
+  function showSort(page, category) 
+  {
+
+      $('#sort-btn').show()
+      $('#sort-options').empty();
+      var sort-options = ["Name", "Price Low-High", "Price High-Low", "Type"];
+      for(ii in sort-options)
+      {
+        $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+category+'"'+", "+'"'+sort-options[ii]+'"'+");showfilter("+page+", "+sort[ii]+");'>"+sort-options[ii]+"</button><br>");
+      }
     return;
   }
 </script>
