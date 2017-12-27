@@ -439,23 +439,7 @@
         $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
       });
 
-    $.getJSON("ellisaudio.github.io/DB/Products/Hire Packages.json").done(function(items) 
-    {
-      for(var ii in items)
-      {
-        if(!items[ii].hide)
-        {
-          var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
-          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-          html += "<span><h1>"+items[ii].name+"</h1>";
-          html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-          html += "<p>"+items[ii].shortDesc+"</p>";
-          html += "<a href='"+items[ii].website+"'>More Info</a>";
-          html += "</span></div>";
-          $('#items').append(html);
-        }
-      }
-    });
+showPackages("Hire Packages");
     }
   }
 
