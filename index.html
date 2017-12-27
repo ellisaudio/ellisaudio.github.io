@@ -385,6 +385,7 @@
 
   function updatePage(page, category, sort)
   {
+    $('#header-row').show();
     $('#page-header').empty().append(page);
     if(page == "Hire Packages")
     {
@@ -434,6 +435,7 @@
     }
     else
     {
+      $('#header-row').hide();
       $('#page-header').empty();
       $('#btn-row').hide();
       $('#filter-btn').hide();
