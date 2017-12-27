@@ -424,23 +424,38 @@
     }
     else if(page == "About Us")
     {
-      showAboutUs();
+      // showAboutUs();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
-      $('#items').empty.append('<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+      $('#items').empty.append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+'<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'+"</div>");
     }
     else
     {
       $('#page-header').empty().append("Home");
       $('#filter-btn').hide();
       $('#sort-btn').hide();
-      // $('#items').append("Hello");/*"<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+home.content+"</div>"*/
       $.getJSON("ellisaudio.github.io/index.json").done(function(items) 
       { 
         $('#items').empty().append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
       });
 
-       showPackages("Hire Packages");
+    $.getJSON("ellisaudio.github.io/DB/Products/Hire Packages.json").done(function(items) 
+    {
+      for(var ii in items)
+      {
+        if(!items[ii].hide)
+        {
+          var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
+          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span><h1>"+items[ii].name+"</h1>";
+          html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
+          html += "<p>"+items[ii].shortDesc+"</p>";
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          html += "</span></div>";
+          $('#items').append(html);
+        }
+      }
+    });
     }
   }
 
