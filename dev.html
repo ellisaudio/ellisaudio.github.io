@@ -298,6 +298,92 @@
     background-color: #313deb;
   }
 
+  #nav > a
+  {
+    display: none;
+  }
+
+  #nav li, a
+  {
+    position: relative;
+    list-style-type: none;
+    box-sizing: border-box;
+    float:left;
+    display: inline-block;
+    width: 100%;
+    background-color: #8587fe;
+        padding: 0;
+    margin:0;
+  }
+  
+  #nav li a
+  {
+    color: #fff;
+    display: block;
+    text-decoration:none;
+        padding: 0;
+    margin:0;
+  }
+
+  #nav li a:active
+  {
+    background-color: #313deb !important;
+  }
+
+/* first level */
+                   
+  #nav > ul > li > a
+  {
+    border:none;
+    height: 100%;
+    font-size: 1.5em;
+    line-height: 2.5em;
+    text-align: center;
+    padding: 0;
+    margin:0;
+  }
+                        
+  #nav > ul > li:not( :last-child ) > a
+  {
+    border-right: 1px solid #8587fe;
+        padding: 0;
+    margin:0;
+  }
+  
+  #nav > ul > li > a:hover
+  {
+    background-color: #313deb;
+  }
+                        
+  #nav > ul > li:hover > a
+  #nav > ul:not( :hover ) > li.active > a
+  {
+    background-color: #8587fe;
+  }
+
+
+  /* second level */
+  
+  #nav li ul a
+  {
+    font-size: 1.25em;
+    border-top: 1px solid #8587fe;
+    padding: 0.75em;
+    border:none;
+    margin: 0;
+  }
+  
+  #nav li ul li a:hover
+  #nav li ul:not( :hover ) li.active a
+  {
+    background-color: #313deb;
+  }
+  
+    #nav > ul > li > ul > li > a:hover
+  {
+    background-color: #313deb;
+  }
+
   @media screen and (max-width: 699px)
   {
       .col-item 
