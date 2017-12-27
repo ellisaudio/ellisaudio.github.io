@@ -334,12 +334,12 @@
   </head>
   <body>
     <div id="body">
-  <div class="row" style="text-align:center; color:white;margin:auto;"> 
+  <div class="row" id="header-row" style="text-align:center; color:white;margin:auto;"> 
   <div class="col-12">
   <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;">Loading...</h1>
   </div>
   </div>
-  <div class="row">
+  <div class="row" id="btn-row">
     <div class="col-4" style="min-height:0 margin-bottom:0;">
   </div>
   <div class="col-5" /*style="color:white;padding:0;margin:0;width:85%;min-height:0;margin-top:0.5%;margin-bottom:0.5%;"*/>
@@ -389,6 +389,7 @@
     if(page == "Hire Packages")
     {
       $('#items').empty();
+      $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
       showPackages(page);
@@ -396,6 +397,7 @@
     else if(page == "For Sale")
     {
       showSaleItems(page);
+      $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
     }
@@ -425,6 +427,7 @@
     else if(page == "About Us")
     {
       // showAboutUs();
+      $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
       // $('#items').empty.append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"/*+'<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'+*/"</div>");
@@ -432,6 +435,7 @@
     else
     {
       $('#page-header').empty();
+      $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
       $.getJSON("ellisaudio.github.io/index.json").done(function(items) 
