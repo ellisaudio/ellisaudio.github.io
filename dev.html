@@ -303,7 +303,7 @@
     display: none;
   }
 
-  #nav li
+  #nav li, a
   {
     position: relative;
     list-style-type: none;
@@ -498,7 +498,7 @@
   <nav id="nav" role="navigation" style="padding: 0;margin:0;">
 	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>
-	<ul class="clearfix" style="padding: 0;margin:0;">
+	<ul class="clearfix" style="">
       <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
