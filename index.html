@@ -387,6 +387,7 @@
   {
     $('#header-row').show();
     $('#page-header').empty().append(page);
+    $('#items').hide();
     if(page == "Hire Packages")
     {
       $('#items').empty();
@@ -435,6 +436,7 @@
     }
     else
     {
+      $('#items').hide();
       $('#header-row').hide();
       $('#page-header').empty();
       $('#btn-row').hide();
@@ -450,6 +452,7 @@
       showPackages("Hire Packages");
       $('#items').append('</div>');
     }
+    $('#items').show();
   }
 
   function getQueryVariable(variable)
