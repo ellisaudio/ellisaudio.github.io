@@ -442,11 +442,11 @@
       $('#sort-btn').hide();
       $.getJSON("ellisaudio.github.io/index.json").done(function(items) 
       { 
-        $('#items').empty().append("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>"+items.content+"</div></div>");
+        // $('#items').empty().append("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>"+items.content+"</div></div>");
       });
       $('#items').append('<div class="row" style="text-align:center; color:white;margin:auto;"><div class="col-12"><h1 style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;">Our Packages for Hire</h1></div></div><div class="row">');
 
-      showPackages("Hire Packages");
+      // showPackages("Hire Packages");
       $('#items').append('</div>');
     }
   }
