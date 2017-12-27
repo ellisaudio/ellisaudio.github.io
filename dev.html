@@ -498,11 +498,11 @@
   <nav id="nav" role="navigation" style="padding: 0;margin:0;">
 	<a href="#nav" title="Show navigation">Show navigation</a>
 	<a href="#" title="Hide navigation">Hide navigation</a>
-	<ul class="clearfix" id="nav-content" style="padding: 0;margin:0;">
+	<ul class="clearfix" style="padding: 0;margin:0;">
       <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button></li>
       <li>
-		<button href="" aria-haspopup="true" class="dropdown-content" onClick="return false;">Equipment for Hire</button>
-		<ul>
+		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
+		<ul class="dropdown-content">
 	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button></li><br>		
 		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button></li><br>
 		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button></li>
