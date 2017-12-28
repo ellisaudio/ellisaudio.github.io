@@ -12,7 +12,6 @@
   .col-1 {width: 10%;margin: 0.5%;padding: 15px;}
   .col-2 {width: 5%;margin: 0.5%;padding: 15px;}
   .col-3 {width: 25%;}
-  .col-item {width: 19%;background-color:white;max-height:330px;min-height:330px;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;}
   .col-4 {width: 6%;margin: 0.5%;padding: 15px;}
   .col-5 {width: 86%;margin: 0.5%;padding: 0;}
   .col-6 {width: 50%;}
@@ -29,6 +28,46 @@
    bottom: 0;
    left: 0;
   }
+
+  .col-hire-item
+  {
+    width: 19%;
+    background-color:white;
+    max-height:330px;
+    min-height:330px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:hidden;
+  }
+
+  .col-package-item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:580px;
+    min-height:580px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:hidden;
+  }
+
+    .col-sale item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:330px;
+    min-height:330px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:hidden;
+  }
+  
   
   [class*='col-'] {
   float: left;
@@ -254,7 +293,7 @@
 
   @media screen and (max-width: 699px)
   {
-    .col-item 
+    .col-sale-item 
     {
       width: 99%;
       background-color:white;
@@ -262,7 +301,30 @@
       min-height:330px;
       margin:0.5%;padding:15px;
       border-radius: 2px;
-      border: 2px solid #8587fe;}
+      border: 2px solid #8587fe;
+    }
+
+    .col-hire-item 
+    {
+      width: 99%;
+      background-color:white;
+      max-height:330px;
+      min-height:330px;
+      margin:0.5%;padding:15px;
+      border-radius: 2px;
+      border: 2px solid #8587fe;
+    }
+
+    .col-package-item 
+    {
+      width: 99%;
+      background-color:white;
+      max-height:330px;
+      min-height:580px;
+      margin:0.5%;padding:15px;
+      border-radius: 2px;
+      border: 2px solid #8587fe;
+    }
 
     #getQuote
     {
@@ -579,7 +641,10 @@
           html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span><h1>"+items[ii].name+"</h1>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          if(items[ii].website != "")
+          {
+            html += "<a href='"+items[ii].website+"'>More Info</a>";
+          }
           html += "</span></div>";
           $('#items').append(html);
         }
@@ -591,7 +656,10 @@
             html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span><h1>"+items[ii].name+"</h1>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-            html += "<a href='"+items[ii].website+"'>More Info</a>";
+            if(items[ii].website != "")
+            {
+              html += "<a href='"+items[ii].website+"'>More Info</a>";
+            }
             html += "</span></div>";
             $('#items').append(html);
           }
@@ -608,12 +676,15 @@
       {
         if(!items[ii].hide)
         {
-          var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
-          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-          html += "<span><h1 style='font-size:large'>"+items[ii].name+"</h1>";
+          var html = "<div class='col-item' style=''>";
+          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1><img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
-          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          if(items[ii].website != "")
+          {
+            html += "<a href='"+items[ii].website+"'>More Info</a>";
+          }
           html += "</span></div>";
           $('#items').append(html);
         }
