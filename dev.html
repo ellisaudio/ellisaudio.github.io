@@ -324,11 +324,11 @@
         display:none;
       }
 
-        #nav:not( :target ) > a:first-of-type,
+/*        #nav:not( :target ) > a:first-of-type,
         #nav:target > a:last-of-type
         {
           display: block;
-        }
+        }*/
 
         #nav > a
         {
@@ -349,7 +349,7 @@
     #nav > ul
     {
         height: auto;
-        display: none;
+        /*display: none;*/
         position: absolute;
         left: 0;
         right: 0;
@@ -415,10 +415,10 @@
   <div class='row' style=''>
   <div class='col-12' style='margin: 0;padding: 0;background-color:#40404d;'>
   <nav id="nav" role="navigation" style="padding: 0;margin:0;">
-	<a href="#nav" title="Show navigation">Show navigation</a>
+	<!-- <a href="#nav" title="Show navigation">Show navigation</a> -->
   
 	<ul class="clearfix" style="">
-    <a href="#" title="Hide navigation">Close</a>
+    <!-- <a href="#" title="Hide navigation">Close</a> -->
       <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button></li>
       <li>
 		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
