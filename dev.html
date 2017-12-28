@@ -149,6 +149,16 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+  .nav-1
+  {
+    width:25%;
+  }
+
+  .nav-btn-1
+  {
+    width:100%;
+  }
   
   #nav-large
   {
@@ -435,10 +445,10 @@
   </nav> -->
   <nav class="clearfix" role="navigation" id="nav-large" style="float:left;">
     <div style="float:left;" class="nav-1">
-    <button style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
   </div>
     <div style="float:left;" class="nav-1">
-      <button id="" class="dropbtn">Equipment for Hire</button>
+      <button id="" class="dropbtn" style="display:block;">Equipment for Hire</button>
       <div id="" class="dropdown-content">
         <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br>    
         <button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
@@ -446,10 +456,10 @@
       </div>
     </div>
     <div style="float:left;" class="nav-1">
-    <button style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
   </div>
     <div style="float:left;" class="nav-1">
-    <button style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
   </div>
   </nav>
 
