@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
   
+  #logo:visited
+  {
+   color:inherit;
+  }
+
   * {box-sizing: border-box;}
   
   .col-1 {width: 10%;margin: 0.5%;padding: 15px;}
   .col-2 {width: 5%;margin: 0.5%;padding: 15px;}
   .col-3 {width: 25%;}
-  .col-item {width: 19%;background-color:white;max-height:330px;min-height:330px;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;}
   .col-4 {width: 6%;margin: 0.5%;padding: 15px;}
   .col-5 {width: 86%;margin: 0.5%;padding: 0;}
   .col-6 {width: 50%;}
@@ -29,6 +33,46 @@
    bottom: 0;
    left: 0;
   }
+
+  .col-hire-item
+  {
+    width: 19%;
+    background-color:white;
+    max-height:350px;
+    min-height:350px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:auto;
+  }
+
+  .col-package-item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:600px;
+    min-height:600px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:auto;
+  }
+
+    .col-sale-item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:350px;
+    min-height:350px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:auto;
+  }
+  
   
   [class*='col-'] {
   float: left;
@@ -45,19 +89,21 @@
   {
     min-height:100%;
     position:relative;
-    background-size: 100%;
-    background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   #body 
   {
     padding:10px;
     padding-bottom:130px;   /* Height of the footer */
-    overflow:hidden;
+    overflow:auto;
+    background-size: 100%;
+    background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
+    background-repeat: repeat-y;
+    background-position: center top;
+    /*background-attachment: fixed;*/
   }
   
   #footer 
@@ -95,6 +141,25 @@
   
   h1{font-family: 'Open Sans', sans-serif;text-align:center;font-size:medium;text-align:left;}
   h2{font-family: 'Open Sans', sans-serif;text-align:center;font-size:small;text-align:left;}
+
+    #profile-pic
+    {
+      width:30%;
+      overflow:auto;
+      border:0;
+      margin:0;
+      float:left;
+    }
+
+    #profile-blurb
+    {
+    overflow: auto;
+    width: 68%;
+    padding: 0;
+    border-radius: 0;
+    border: 0px solid #8587fe;
+    float: right;
+    }
   
 /* Style The Dropdown Button */
 .dropbtn {
@@ -135,6 +200,7 @@
     display: block;
     border-radius: 0px;
     border: 0px solid #8587fe;
+    width:100%;
 }
 
 /* Change color of dropdown links on hover */
@@ -149,8 +215,72 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+  .nav-1
+  {
+    width:25%;
+  }
+
+  .nav-btn-2
+  {
+    width:100%;
+    background-color:#8587fe;
+    border:0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size:large;
+    padding: 0.75em;
+    color:white;
+  }
+
+  .nav-btn-1
+  {
+    width:100%;
+    background-color:#8587fe;
+    border:0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size:large;
+    padding: 0.75em;
+    color:white;
+  }
+
+  #dropbtn
+  {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-dropdown-content
+  {
+    display: none;
+    position: absolute;
+    background-color: #8587fe;
+    min-width: 25%;
+    box-shadow: 0;
+    z-index: 1;
+    border-radius: 0;
+    border: none;
+    color:white;
+  }
+
+  /* Show the dropdown menu on hover */
+#nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.nav-btn-1:hover
+{
+    background-color: #313deb;
+}
+
+.nav-btn-2:hover
+{
+    background-color: #313deb;
+}
   
-  #nav
+  #nav-large
   {
     width: 100%; /* 1000 */;
     font-family: 'Open Sans', sans-serif;
@@ -164,144 +294,98 @@
     text-align: justify;
     z-index:1;
     background-color: #8587fe;
+    display: inline-block;
   }     
 
-  #nav ul
+  @media screen and (max-width: 699px)
   {
-    padding: 0;
-    margin: 0;
+    .col-sale-item 
+    {
+      width: 99%;
+      min-height:250px;
+      max-height:400px;
+    }
+
+    .col-hire-item 
+    {
+      width: 99%;
+      min-height:250px;
+      max-height:400px;
+    }
+
+    .col-package-item 
+    {
+      width: 99%;
+      min-height:300px;
+      max-height:600px;
+    }
+
+    #getQuote
+    {
+      display:none;
+    }
+
+    .nav-1
+    {
+      width:100%;
+    }
+
+    #nav-large
+    {
+      display: block;
+    }    
+
+    .nav-dropdown-content
+    {
+      min-width: 100%;
+    }
+
+    #profile-pic
+    {
+      width:100%;
+    }
+
+    #profile-blurb
+    {
+      width:100%;
+    }
   }
 
-  #nav li, button
+  @media screen and (max-width: 1030px) and (min-width: 700px)
   {
-    position: relative;
-    list-style-type: none;
-    box-sizing: border-box;
-    float:left;
-    display: inline-block;
-    width: 100%;
-    background-color: #8587fe;
-        padding: 0;
-    margin:0;
-  }
-  
-  #nav li button
-  {
-    color: #fff;
-    display: block;
-    text-decoration:none;
-        padding: 0;
-    margin:0;
-  }
+    .col-package-item 
+    {
+      width: 32%;
+    }
 
-  #nav li button:active
-  {
-    background-color: #313deb !important;
-  }
+      .col-sale-item 
+    {
+      width: 32%;
+    }
 
-/* first level */
+    .col-hire-item
+    {
+      width: 32%;
+    }
 
-  #nav > ul
-  {
-    height: 3.75em;
-    background-color: #8587fe;
-    padding: 0;
-    margin:0;
-  }
-  
-  #nav > ul > li
-  {
-    width: 25%;
-    height: 100%;
-    float: left;
-    padding: 0;
-    margin:0;
-  }
-                   
-  #nav > ul > li > button
-  {
-    border:none;
-    height: 100%;
-    font-size: 1.5em;
-    line-height: 2.5em;
-    text-align: center;
-    padding: 0;
-    margin:0;
-  }
-                        
-  #nav > ul > li:not( :last-child ) > button
-  {
-    border-right: 1px solid #8587fe;
-        padding: 0;
-    margin:0;
-  }
-  
-  #nav > ul > li > button:hover
-  {
-    background-color: #313deb;
-  }
-                        
-  #nav > ul > li:hover > button
-  #nav > ul:not( :hover ) > li.active > button
-  {
-    background-color: #8587fe;
+    #getQuote
+    {
+      width:30%;
+    }
+
   }
 
 
-  /* second level */
-
-  #nav li ul
-  {
-    background-color: #8587fe;
-    display: none;
-    position: absolute;
-    top: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  #nav li:hover ul
-  {
-    display: block;
-    left: 0;
-    right: 0;
-  }
-  
-  #nav li:not( :first-child ):hover ul
-  {
-    left: -1px;
-  }
-  
-  #nav li ul button
-  {
-    font-size: 1.25em;
-    border-top: 1px solid #8587fe;
-    padding: 0.75em;
-    border:none;
-    margin: 0;
-  }
-  
-  #nav li ul li button:hover
-  #nav li ul:not( :hover ) li.active button
-  {
-    background-color: #313deb;
-  }
-  
-    #nav > ul > li > ul > li > button:hover
-  {
-    background-color: #313deb;
-  }
   </style> 
   <div class='row' style='background-color:white'>
   <div class='col-2' style='margin: 0.5% 0;padding: 15px 0;'></div>
-  <div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
-  <a href="" onclick='updatePage("Home", "Show All", "All")'><img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;'></a>
+  <a id="logo" href="" onclick='updatePage("Home", "Show All", "All")'' style=''><div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
+  <img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;background-color:white;'>
   </div>
   <div class='col-6' style='margin: 0 0.5%;padding: 0 15px;max-height:10%;min-height:10%;'>
   <h1 style='font-size:200%;float:left;margin-top:5%;'>Ellis Audio</h1>
-  </div>
-  <div class="col-3" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
+  </div></a>
+  <div class="col-3" id="getQuote" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
   <br>
   <b>Get a Quote Today<br></b>
   Ph: 0458 708 648<br>
@@ -309,34 +393,35 @@
   Yeronga, Brisbane, QLD, Australia
   </div>
   <div class='row' style=''>
-  <div class='col-12' style='margin: 0;padding: 0;background-color:#40404d;'>
-  <nav id="nav" role="navigation" style="padding: 0;margin:0;">
-<!--	<a href="#nav" title="Show navigation">Show navigation</a>
-	<a href="#" title="Hide navigation">Hide navigation</a>-->
-	<ul class="clearfix" style="padding: 0;margin:0;">
-      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button></li>
-      <li>
-		<button href="" aria-haspopup="true" onClick="return false;">Equipment for Hire</button>
-		<ul>
-	      <li><button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button></li><br>		
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button></li><br>
-		  <li><button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button></li>
-		</ul>
-	  </li>
-      <li>
-	    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
-	  </li>
-	  <li><button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
-  	  </li>
-	</ul>
+  <div class='col-12' style='margin-bottom:auto;0;padding: 0;background-color:#40404d;'>
+
+  <nav class="clearfix" role="navigation" id="nav-large" style="float:left;">
+    <div style="float:left;" class="nav-1">
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
+  </div>
+    <div style="float:left;" id="nav-dropdown" class="nav-1">
+      <button id="hire-btn" class="nav-btn-1" style="display:block;">Equipment for Hire</button>
+      <div id="" class="nav-dropdown-content">
+        <button class="nav-btn-2" onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br> 
+        <button class="nav-btn-2" onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
+        <button class="nav-btn-2" onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button>
+      </div>
+    </div>
+    <div style="float:left;" class="nav-1">
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
+  </div>
+    <div style="float:left;" class="nav-1">
+    <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
+  </div>
   </nav>
+
   </div></div></div>
   </head>
   <body>
     <div id="body">
   <div class="row" id="header-row" style="text-align:center; color:white;margin:auto;"> 
   <div class="col-12">
-  <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;text-outline: 2px 2px #8587fe;">Loading...</h1>
+  <h1 id="page-header" style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;font-outline: 2px 2px #8587fe;">Loading...</h1>
   </div>
   </div>
   <div class="row" id="btn-row">
@@ -430,11 +515,24 @@
     else if(page == "About Us")
     {
       // showAboutUs();
+      $('#items').show();
       $('#btn-row').hide();
-      $('#filter-btn').hide();
-      $('#sort-btn').hide();
-      $('#page-header').append("<br>(Under Construction)");
-//       $('#items').empty.append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>Under Development"/*+'<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fellisaudiohire&tabs=timeline&width=340&height=500&small_header=false&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'+*/"</div>");
+
+      var html = "<div class='row'>";
+        html += "<div class='col-12' style='background-color:white;margin:auto;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%; opacity:08;'>";
+          html += "<h1 style='font-size:x-Large;text-align:center;'>Who are we?</h1>";
+          html += "<div class='row'>";
+            html += "<div id='profile-pic' style=''>";
+              html += "<br><img src='ellisaudio.github.io/images/Nick Profile.jpg' alt='Image Not Available' style='width:100%;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+            html += "</div>";
+            html += "<div id='profile-blurb' style=''>";
+              html += "<h2 style='font-size:x-large'>Nick Ellis - Director</h2>";
+              html += "<p style='font-size:large;text-align:justify;'>Nick is the founder and owner of Ellis Audio, his desire is to provide high quality audio experiences for all of those using and listening to our systems. Nick has been operating Audio/Visual for over 10 years, including ten years of operating A/V though church (including two years overseeing the entire Audio/Visual ministry at two different churches) and operating Audio/Visual for six years for an international mission organisation.</p>";
+            html += "</div>";
+          html += "</div>";
+        html += "</div>";
+      html += "</div>";
+      $('#items').empty().append(html);
     }
     else
     {
@@ -447,7 +545,7 @@
       $('#items').empty();
       $.getJSON("ellisaudio.github.io/index.json").done(function(items) 
       { 
-        $('#items').prepend("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>"+items.content+"</div></div>");
+        $('#items').prepend("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>"+items.content+"</div></div>");
       });
       $('#items').append('<div class="row" style="text-align:center; color:white;margin:auto;"><div class="col-12"><h1 style="margin:auto;text-align:center;margin-top:1%;font-size:xx-large;text-outline: 2px 2px #8587fe;">Our Packages for Hire</h1></div></div><div class="row">');
 
@@ -476,7 +574,6 @@
 
   function showAboutUs()
   {
-    $('#items').empty();
     $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
     {
       $('#items').append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
@@ -490,11 +587,15 @@
     {
       for(var ii in items)
       {
-        var html = "<div class='col-item' style='overflow:hidden;'>";
-        html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-        html += "<span><h1>"+items[ii].name+"</h1>";
+        var html = "<div class='col-sale-item' style=''>";
+        html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        if(items[ii].website != "")
+        {
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+        }
         html += "</span></div>";
         $('#items').append(html);
       }
@@ -541,11 +642,15 @@
       {
         if(category == "Show All")
         {
-          var html = "<div class='col-item' style='overflow:hidden;'>";
-          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-          html += "<span><h1>"+items[ii].name+"</h1>";
+          var html = "<div class='col-hire-item' style=''>";
+          html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          if(items[ii].website != "")
+          {
+            html += "<a href='"+items[ii].website+"'>More Info</a>";
+          }
           html += "</span></div>";
           $('#items').append(html);
         }
@@ -553,11 +658,15 @@
         {
           if(items[ii].category == category)
           {
-            var html = "<div class='col-item' style='overflow:hidden;'>";
-            html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-            html += "<span><h1>"+items[ii].name+"</h1>";
+            var html = "<div class='col-hire-item' style=''>";
+            html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+            html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
-            html += "<a href='"+items[ii].website+"'>More Info</a>";
+            if(items[ii].website != "")
+            {
+              html += "<a href='"+items[ii].website+"'>More Info</a>";
+            }
             html += "</span></div>";
             $('#items').append(html);
           }
@@ -574,12 +683,16 @@
       {
         if(!items[ii].hide)
         {
-          var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
-          html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-          html += "<span><h1>"+items[ii].name+"</h1>";
+          var html = "<div class='col-package-item' style=''>";
+          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
-          html += "<a href='"+items[ii].website+"'>More Info</a>";
+          if(items[ii].website != "")
+          {
+            html += "<a href='"+items[ii].website+"'>More Info</a>";
+          }
           html += "</span></div>";
           $('#items').append(html);
         }
@@ -636,6 +749,3 @@
 </div>
 </footer>
 </html>
-
-
-
