@@ -173,6 +173,19 @@
     display: inline-block;
   }
 
+  .nav-dropdown-content
+  {
+    display: none;
+    position: absolute;
+    background-color: #8587fe;
+    min-width: 25%;
+    box-shadow: 0;
+    z-index: 1;
+    border-radius: 0;
+    border: none;
+    color:white;
+  }
+
   /* Show the dropdown menu on hover */
 #nav-dropdown:hover .dropdown-content {
     display: block;
@@ -472,7 +485,7 @@
   </div>
     <div style="float:left;" id="nav-dropdown" class="nav-1">
       <button id="hire-btn" class="nav-btn-1" style="display:block;">Equipment for Hire</button>
-      <div id="" class="dropdown-content">
+      <div id="" class="nav-dropdown-content">
         <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br> 
         <button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
         <button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button>
