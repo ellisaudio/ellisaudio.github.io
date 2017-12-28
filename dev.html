@@ -359,16 +359,31 @@
 
   @media screen and (max-width: 1030px) and (min-width: 700px)
   {
-      .col-item 
-      {
-        width: 32%;
-        background-color:white;
-        max-height:330px;
-        min-height:330px;
-        margin:0.5%;padding:15px;
-        border-radius: 2px;
-        border: 2px solid #8587fe;
-      }
+  .col-package-item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:580px;
+    min-height:580px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:hidden;
+  }
+
+    .col-sale item 
+  {
+    width: 19%;
+    background-color:white;
+    max-height:330px;
+    min-height:330px;
+    margin:0.5%;
+    padding:15px;
+    border-radius: 2px;
+    border: 2px solid #8587fe;
+    overflow:hidden;
+  }
   }
 
 
@@ -583,7 +598,7 @@
     {
       for(var ii in items)
       {
-        var html = "<div class='col-item' style='overflow:hidden;'>";
+        var html = "<div class='col-sale-item' style='overflow:hidden;'>";
         html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span><h1>"+items[ii].name+"</h1>";
         html += "<h2>$"+items[ii].cost+"</h2>";
@@ -637,7 +652,7 @@
       {
         if(category == "Show All")
         {
-          var html = "<div class='col-item' style='overflow:hidden;'>";
+          var html = "<div class='col-hire-item' style='overflow:hidden;'>";
           html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span><h1>"+items[ii].name+"</h1>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -652,7 +667,7 @@
         {
           if(items[ii].category == category)
           {
-            var html = "<div class='col-item' style='overflow:hidden;'>";
+            var html = "<div class='col-hire-item' style='overflow:hidden;'>";
             html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span><h1>"+items[ii].name+"</h1>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -676,7 +691,7 @@
       {
         if(!items[ii].hide)
         {
-          var html = "<div class='col-item' style=''>";
+          var html = "<div class='col-package-item' style=''>";
           html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1><img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
