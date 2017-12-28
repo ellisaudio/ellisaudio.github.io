@@ -167,12 +167,12 @@
     display: inline-block;
   }     
 
-  #nav ul
+  #nav-large ul
   {
     padding: 0;
     margin: 0;
   }
-  #nav > ul > button
+  #nav-large > ul > button
   {
     display:none;
     width: 3.125em;
@@ -182,12 +182,12 @@
     position: absolute;
   }
 
-  #nav > button
+  #nav-large > button
   {
     display: none;
   }
 
-  #nav li, button
+  #nav-large li, button
   {
     position: relative;
     list-style-type: none;
@@ -200,7 +200,7 @@
     margin:0;
   }
   
-  #nav li button
+  #nav-large li button
   {
     color: #fff;
     display: block;
@@ -209,14 +209,14 @@
     margin:0;
   }
 
-  #nav li button:active
+  #nav-large li button:active
   {
     background-color: #313deb !important;
   }
 
 /* first level */
 
-  #nav > ul
+  #nav-large > ul
   {
     height: 3.75em;
     background-color: #8587fe;
@@ -224,7 +224,7 @@
     margin:0;
   }
   
-  #nav > ul > li
+  #nav-large > ul > li
   {
     width: 25%;
     height: 100%;
@@ -233,7 +233,7 @@
     margin:0;
   }
                    
-  #nav > ul > li > button
+  #nav-large > ul > li > button
   {
     border:none;
     height: 100%;
@@ -244,20 +244,20 @@
     margin:0;
   }
                         
-  #nav > ul > li:not( :last-child ) > button
+  #nav-large > ul > li:not( :last-child ) > button
   {
     border-right: 1px solid #8587fe;
     padding: 0;
     margin:0;
   }
   
-  #nav > ul > li > button:hover
+  #nav-large > ul > li > button:hover
   {
     background-color: #313deb;
   }
                         
-  #nav > ul > li:hover > button
-  #nav > ul:not( :hover ) > li.active > button
+  #nav-large > ul > li:hover > button
+  #nav-large > ul:not( :hover ) > li.active > button
   {
     background-color: #8587fe;
   }
@@ -265,7 +265,7 @@
 
   /* second level */
 
-  #nav li ul
+  #nav-large li ul
   {
     background-color: #8587fe;
     display: none;
@@ -276,19 +276,19 @@
     text-align: center;
   }
   
-  #nav li:hover ul
+  #nav-large li:hover ul
   {
     display: block;
     left: 0;
     right: 0;
   }
   
-  #nav li:not( :first-child ):hover ul
+  #nav-large li:not( :first-child ):hover ul
   {
     left: -1px;
   }
   
-  #nav li ul button
+  #nav-large li ul button
   {
     font-size: 1.25em;
     border-top: 1px solid #8587fe;
@@ -297,13 +297,13 @@
     margin: 0;
   }
   
-  #nav li ul li button:hover
-  #nav li ul:not( :hover ) li.active button
+  #nav-large li ul li button:hover
+  #nav-large li ul:not( :hover ) li.active button
   {
     background-color: #313deb;
   }
   
-    #nav > ul > li > ul > li > button:hover
+    #nav-large > ul > li > ul > li > button:hover
   {
     background-color: #313deb;
   }
@@ -331,7 +331,7 @@
           display: block;
         }*/
 
-        #nav > a
+        #nav-large > a
         {
           width: 3.125em;
           height: 3.125em;
@@ -340,14 +340,14 @@
           position: absolute;
         }
 
-        #nav > ul > a
+        #nav-large > ul > a
         {
           display:block;
         }
  
     /* first level */
  
-    #nav > ul
+    #nav-large > ul
     {
         height: auto;
         /*display: none;*/
@@ -355,11 +355,11 @@
         left: 0;
         right: 0;
     }
-        #nav:target > ul
+        #nav-large:target > ul
         {
             display: block;
         }
-        #nav > ul > li
+        #nav-large > ul > li
         {
             width: 100%;
             float: none;
@@ -367,7 +367,7 @@
  
     /* second level */
  
-    #nav li ul
+    #nav-large li ul
     {
         position: static;
     }
