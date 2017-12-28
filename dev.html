@@ -588,7 +588,8 @@
       for(var ii in items)
       {
         var html = "<div class='col-sale-item' style=''>";
-        html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
         if(items[ii].website != "")
@@ -642,7 +643,8 @@
         if(category == "Show All")
         {
           var html = "<div class='col-hire-item' style=''>";
-          html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           if(items[ii].website != "")
@@ -657,7 +659,8 @@
           if(items[ii].category == category)
           {
             var html = "<div class='col-hire-item' style=''>";
-            html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+            html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
             if(items[ii].website != "")
@@ -681,7 +684,8 @@
         if(!items[ii].hide)
         {
           var html = "<div class='col-package-item' style=''>";
-          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1><img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".png' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
