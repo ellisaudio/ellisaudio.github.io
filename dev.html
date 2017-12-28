@@ -44,7 +44,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:hidden;
+    overflow:auto;
   }
 
   .col-package-item 
@@ -57,7 +57,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:hidden;
+    overflow:auto;
   }
 
     .col-sale item 
@@ -145,7 +145,7 @@
     #profile-pic
     {
       width:30%;
-      overflow:hidden;
+      overflow:auto;
       border:0;
       margin:0;
       float:left;
@@ -579,7 +579,7 @@
     {
       for(var ii in items)
       {
-        var html = "<div class='col-sale-item' style='overflow:hidden;'>";
+        var html = "<div class='col-sale-item' style='overflow:auto;'>";
         html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
@@ -633,7 +633,7 @@
       {
         if(category == "Show All")
         {
-          var html = "<div class='col-hire-item' style='overflow:hidden;'>";
+          var html = "<div class='col-hire-item' style='overflow:auto;'>";
           html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -648,7 +648,7 @@
         {
           if(items[ii].category == category)
           {
-            var html = "<div class='col-hire-item' style='overflow:hidden;'>";
+            var html = "<div class='col-hire-item' style='overflow:auto;'>";
             html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1><img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
