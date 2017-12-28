@@ -159,6 +159,12 @@
   {
     width:100%;
   }
+
+  #dropbtn
+  {
+    position: relative;
+    display: inline-block;
+  }
   
   #nav-large
   {
@@ -448,9 +454,9 @@
     <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
   </div>
     <div style="float:left;" class="nav-1">
-      <button id="" class="dropbtn" style="display:block;">Equipment for Hire</button>
+      <button id="hire-btn" class="nav-btn-1" style="display:block;">Equipment for Hire</button>
       <div id="" class="dropdown-content">
-        <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br>    
+        <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br> 
         <button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
         <button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button>
       </div>
