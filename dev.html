@@ -415,8 +415,8 @@
   <div class='row' style=''>
   <div class='col-12' style='margin-bottom:auto;0;padding: 0;background-color:#40404d;'>
 
-  <nav role="navigation">
-<!--     <div class="dropdown">
+  <nav role="navigation" id="nav-small" style="display:none">
+    <div class="dropdown">
       <button class="dropbtn" id="" style="display:block;"></button>
       <div id="" class="dropdown-content">
         <button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
@@ -431,23 +431,20 @@
         <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
         <button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
       </div>
-    </div> -->
-    <!-- <div class="dropdown"> -->
-      <!-- <button class="dropbtn" id="" style="display:block;"></button> -->
-      <!-- <div id="" class="dropdown-content"> -->
-        <button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
-        <div class="dropdown">
-          <button class="dropbtn" id="" style="display:block;">Equipment for Hire</button>
-          <div id="" class="dropdown-content">
-            <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br>    
-            <button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
-            <button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button>
-          </div>
-        </div>
-        <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
-        <button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
+    </div>
+  </nav>
+  <nav role="navigation" style="float:left;">
+    <button onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
+    <div class="dropdown">
+      <button class="dropbtn" id="" style="display:block;">Equipment for Hire</button>
+      <div id="" class="dropdown-content">
+        <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br>    
+        <button onclick="$('#items').empty().append('Loading...');updatePage('Visual Hire', 'Show All', 'Category');">Display Equipment</button><br>
+        <button onclick="$('#items').empty().append('Loading...');updatePage('Lighting Hire', 'Show All', 'Category');">Lighting Equipment</button>
       </div>
-    <!-- </div> -->
+    </div>
+    <button onclick="$('#items').empty().append('Loading...');updatePage('For Sale', 'Show All', 'Category');">Equipment for Sale</button>
+    <button onclick="$('#items').empty().append('Loading...');updatePage('About Us', 'Show All', 'Category');">About Us</button>
   </nav>
 
 
