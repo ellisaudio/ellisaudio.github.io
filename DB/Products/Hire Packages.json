@@ -1,6 +1,7 @@
 [
  {
    "name": "Parties and Weddings",
+   "catalog": 1,
    "perDay": 100,
    "perWeek": "POA",
    "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>1 x Vocal Microphones<br>Required Cables",
@@ -10,6 +11,7 @@
  },
  {
    "name": "Corporate Functions",
+   "catalog": 2,
    "perDay": 130,
    "perWeek": "POA",
    "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>2 x Shure GLXD Microphones (Lapel/Headset/Handheld)<br>Required Cables",
@@ -19,6 +21,7 @@
  },
  {
    "name": "Small Bands",
+   "catalog": 3,
    "perDay": 140,
    "perWeek": 600,
    "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>2 x Foldback Wedge<br>3 x Vocal Microphones<br>2 x Instrument Microphones<br>5 x Microphone Stands<br>Required Cables",
@@ -28,6 +31,7 @@
  },
  {
    "name": "Large Bands",
+   "catalog": 4,
    "perDay": 250,
    "perWeek": 1200,
    "shortDesc": "2 x 300W JBL Speakers<br>1 x 500 W Subwoofer<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>4 x Foldback Wedge or Behringer P1 IEM's<br>4 x Vocal Microphones<br>3 x Instrument Microphones<br>Required Mic Stands<br>Required Cables",
@@ -37,6 +41,7 @@
  },
  {
    "name": "Conferences & Camps",
+   "catalog": 5,
    "perDay": 600,
    "perWeek": 2400,
    "shortDesc": "Includes your selection of our entire inventory",
@@ -46,6 +51,7 @@
  },
  {
    "name": "Ministry Pack",
+   "catalog": 6,
    "perDay": 150,
    "perWeek": 700,
    "shortDesc": "Includes your selection of our entire inventory<br>3 days - $350<br>5 days - $550<br>6 days - $650<br>7 days - $700<br>14 days - $1200",
