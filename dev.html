@@ -46,13 +46,14 @@
     min-height:100%;
     position:relative;
     font-family: 'Open Sans', sans-serif;
+    overflow:auto;
   }
   
   #body 
   {
     padding:10px;
     padding-bottom:130px;   /* Height of the footer */
-    overflow:hidden;
+    overflow:auto;
     background-size: 100%;
     background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
     background-repeat: repeat-y;
@@ -154,6 +155,7 @@
     display: block;
     border-radius: 0px;
     border: 0px solid #8587fe;
+    width:100%;
 }
 
 /* Change color of dropdown links on hover */
@@ -311,12 +313,12 @@
   </style> 
   <div class='row' style='background-color:white'>
   <div class='col-2' style='margin: 0.5% 0;padding: 15px 0;'></div>
-  <div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
-  <a href="" onclick='updatePage("Home", "Show All", "All")'><img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;background-color:white;'></a>
+  <a href="" onclick='updatePage("Home", "Show All", "All")'><div class='col-1' style='margin: 0;padding: 0;max-height:10%;min-height:10%;'>
+  <img src='https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;background-color:white;'>
   </div>
   <div class='col-6' style='margin: 0 0.5%;padding: 0 15px;max-height:10%;min-height:10%;'>
   <h1 style='font-size:200%;float:left;margin-top:5%;'>Ellis Audio</h1>
-  </div>
+  </div></a>
   <div class="col-3" id="getQuote" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
   <br>
   <b>Get a Quote Today<br></b>
@@ -523,7 +525,10 @@
         html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span><h1>"+items[ii].name+"</h1>";
         html += "<h2>$"+items[ii].cost+"</h2>";
-        html += "<a href='"+items[ii].website+"'>More Info</a>";
+        if(items[ii].website != "")
+        {
+          html += "<a href='"+items[ii].website+"'>More Info</a>";
+        }
         html += "</span></div>";
         $('#items').append(html);
       }
@@ -605,7 +610,7 @@
         {
           var html = "<div class='col-item' style='max-height:580px;min-height:580px;overflow:hidden;'>";
           html += "<img src='"+items[ii].photo+"' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
-          html += "<span><h1>"+items[ii].name+"</h1>";
+          html += "<span><h1 style='font-size:large'>"+items[ii].name+"</h1>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
           html += "<a href='"+items[ii].website+"'>More Info</a>";
