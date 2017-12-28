@@ -172,6 +172,16 @@
     position: relative;
     display: inline-block;
   }
+
+  /* Show the dropdown menu on hover */
+#nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#nav-dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
   
   #nav-large
   {
@@ -460,7 +470,7 @@
     <div style="float:left;" class="nav-1">
     <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
   </div>
-    <div style="float:left;" class="nav-1">
+    <div style="float:left;" id="nav-dropdown" class="nav-1">
       <button id="hire-btn" class="nav-btn-1" style="display:block;">Equipment for Hire</button>
       <div id="" class="dropdown-content">
         <button onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br> 
