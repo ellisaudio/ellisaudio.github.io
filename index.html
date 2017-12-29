@@ -5,6 +5,7 @@
   <head>
     <base target="_top">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta keywords="Audio, Visual, AV, Hire, Brisbane, Yeronga, Australia, Microphones, Speakers, Sound, PA, Business, Ellis Audio, Nick Ellis">
     <style>
   
   #logo:visited
@@ -62,7 +63,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
 
   .col-package-item 
@@ -75,7 +76,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
 
     .col-sale-item 
@@ -88,7 +89,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
   
   
@@ -108,15 +109,14 @@
     min-height:100%;
     position:relative;
     font-family: 'Open Sans', sans-serif;
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow:auto;
   }
   
   #body 
   {
     padding:10px;
     padding-bottom:130px;   /* Height of the footer */
-    overflow:scroll;
+    overflow:auto;
     -webkit-overflow-scrolling: touch;
     background-size: 100%;
     background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
@@ -148,8 +148,7 @@
     height:100%;
     padding:0px;
     /*background-color: #40404d;*/
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow:auto;
        margin:0;
 
   }
@@ -165,7 +164,7 @@
     #profile-pic
     {
       width:30%;
-      overflow:scroll;
+      overflow:auto;
       border:0;
       margin:0;
       float:left;
@@ -173,7 +172,7 @@
 
     #profile-blurb
     {
-    overflow:scroll;
+    overflow:auto;
     width: 68%;
     padding: 0;
     border-radius: 0;
@@ -353,13 +352,32 @@
     padding-top: 20px;
   }
 
+  .item-title
+  {
+  	font-size:large;
+  	text-align:center;
+  }
+
+  #package-item-title
+  {
+  	font-size:x-large;
+  }
+
   @media screen and (max-width: 699px)
   {
+
+  	html, body, #container, #boby
+  	{
+  		overflow:scroll;
+  		-webkit-overflow-scrolling: touch;
+  	}
+
     .col-sale-item 
     {
       width: 99%;
       min-height:250px;
       max-height:400px;
+      overflow:scroll;
     }
 
     .col-hire-item 
@@ -367,6 +385,7 @@
       width: 99%;
       min-height:250px;
       max-height:400px;
+      overflow:scroll;
     }
 
     .col-package-item 
@@ -374,6 +393,17 @@
       width: 99%;
       min-height:300px;
       max-height:600px;
+      overflow:scroll;
+    }
+
+    .item-title
+    {
+    	font-size:large;
+    }
+
+    #package-item-title
+    {
+    	font-size:large;
     }
 
     #getQuote
@@ -446,19 +476,28 @@
 
   @media screen and (max-width: 1030px) and (min-width: 700px)
   {
+
+  	html, body, #container, #boby
+  	{
+  		overflow:scroll;
+  		-webkit-overflow-scrolling: touch;
+  	}
     .col-package-item 
     {
       width: 32%;
+      overflow:scroll;
     }
 
       .col-sale-item 
     {
       width: 32%;
+      overflow:scroll;
     }
 
     .col-hire-item
     {
       width: 32%;
+      overflow:scroll;
     }
 
     #getQuote
@@ -698,7 +737,7 @@
         if(!items[ii].hide)
         {
         var html = "<div class='col-sale-item' style=''>";
-        html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
@@ -708,7 +747,7 @@
         }
         html += "</span></div>";
         $('#items').append(html);
-      }
+        }
       }
     });
   }
@@ -756,7 +795,7 @@
         if(category == "Show All")
         {
           var html = "<div class='col-hire-item' style=''>";
-          html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+          html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -772,7 +811,7 @@
           if(items[ii].category == category)
           {
             var html = "<div class='col-hire-item' style=''>";
-            html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+            html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -798,7 +837,7 @@
         if(!items[ii].hide)
         {
           var html = "<div class='col-package-item' style=''>";
-          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1>";
+          html += "<h1 class='item-title' id='package-item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
