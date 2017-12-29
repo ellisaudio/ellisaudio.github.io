@@ -12,6 +12,16 @@
    color:inherit;
   }
 
+    #tagline
+    {
+      margin-bottom: 0;
+      /*display:none;*/
+    }
+
+  button:focus {
+  outline: none;
+}
+
   * {box-sizing: border-box;}
   
   .col-1 {width: 10%;margin: 0.5%;padding: 15px;}
@@ -173,6 +183,7 @@
     margin: 0;
     border-radius: 2px;
     border: 2px solid #8587fe;
+    font-size:medium;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -197,12 +208,13 @@
 .dropdown-content button {
     color: black;
     background-color: white;
-    padding: 5px 16px;
+    padding: 10px 16px;
     text-decoration: bold;
     display: block;
     border-radius: 0px;
     border: 0px solid #8587fe;
     width:100%;
+    font-size:medium;
 }
 
 /* Change color of dropdown links on hover */
@@ -307,9 +319,9 @@
 
   #nav-btn
   {
-    width: 10%;
+    width: 14%;
     font-size: xx-large;
-    padding: 0.5%;
+    padding: 5px;
     text-align: center;
     font-weight: normal;
     border-radius: 2px;
@@ -329,6 +341,7 @@
     padding: 0 15px;
     max-height:10%;
     min-height:10%;
+    width:16%;
   }
 
   @media screen and (max-width: 699px)
@@ -372,11 +385,14 @@
     #nav-btn-container
     {
       display: block;
+      padding:10px;
+      padding-top: 0;
     }   
 
     .nav-dropdown-content
     {
       min-width: 100%;
+      position:relative;
     }
 
     #profile-pic
@@ -397,7 +413,25 @@
     #logo-text
     {
       width:50%;
-      padding: 35px 0;
+      padding:0;
+      padding-top: 10px;
+    }
+
+    #tagline
+    {
+      display:block;
+    }
+
+    .nav-btn-1
+    {
+      text-align:left;
+      padding-left:11%;
+    }
+
+    .nav-btn-2
+    {
+      text-align:left;
+      padding-left:21%;
     }
   }
 
@@ -423,6 +457,18 @@
       width:30%;
     }
 
+    #logo
+    {
+      width:20%;
+    }
+
+    #logo-text
+    {
+      width:30%;
+      margin:0;
+      margin-top:10px;
+    }
+
   }
 
 
@@ -433,8 +479,8 @@
   <img src='ellisaudio.github.io/DB/images/logo.jpeg' alt='ELLIS AUDIO' style='max-width:100%;max-height:100%;background-color:white;'>
   </div>
   <div class='col-6' id='logo-text' style=''>
-  <h1 style='font-size:200%;float:left;margin-top:5%;'>Ellis Audio</h1>
-  </div></a>
+  <h1 style='font-size:200%;float:left;margin-top:40px;margin-bottom: 5px'>Ellis Audio</h1>
+  <p id="tagline" style="color: darkgrey;"> Parties| Weddings| Live Music| Corporate events</p></div></a>
   <div class="col-3" id="getQuote" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
   <br>
   <b>Get a Quote Today<br></b>
@@ -443,7 +489,7 @@
   Yeronga, Brisbane, QLD, Australia
   </div>
   <div class='row' style=''>
-  <div class='col-12' style='margin-bottom:auto;0;padding: 0;background-color:#40404d;'>
+  <div class='col-12' style='margin-bottom:auto;0;padding: 0;'>
   <div style="float:left;" id="nav-btn-container" class="nav-1">
     <button id="nav-btn" class="nav-btn-1" style="float:left;" onclick="$('#nav').toggle();"><img id="nav-btn-img" src="ellisaudio.github.io/DB/images/icon-menu-white.png"></button>
   </div>
@@ -770,7 +816,7 @@
         }
         else
         {
-          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+", "+'"'+sort+'"'+");showSort("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+");'>"+categories[ii].category+"</button><br>");
+          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+", "+'"'+sort+'"'+");showSort("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+");'>"+categories[ii].category+"</button>");
         }
       }
     });
@@ -784,7 +830,7 @@
       var sortoptions = ["Category", "Name", "Price Low-High", "Price High-Low"];
       for(var ii in sortoptions)
       {
-        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button><br>");
+        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button>");
       }
     return;
   }
