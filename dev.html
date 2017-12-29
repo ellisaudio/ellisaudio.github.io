@@ -297,10 +297,15 @@
     display: inline-block;
   }  
 
-  #nav-btn
+  #nav-btn-container
   {
     display:none;
-    width: 100%;
+    width:100%;
+  }
+
+  #nav-btn
+  {
+    width: 10%;
     font-size: xx-large;
     padding: 0;
     text-align: center;
@@ -431,8 +436,8 @@
   </div>
   <div class='row' style=''>
   <div class='col-12' style='margin-bottom:auto;0;padding: 0;background-color:#40404d;'>
-  <div style="float:left;" id="nav-btn" class="nav-1">
-    <button class="nav-btn-1" style="float:left;" onclick="$('#nav').toggle();">Show Navigation</button>
+  <div style="float:left;" id="nav-btn-container" class="nav-1">
+    <button id="nav-btn" class="nav-btn-1" style="float:left;" onclick="$('#nav').toggle();">Show Navigation</button>
   </div>
   <nav class="clearfix" role="navigation" id="nav" style="float:left;">
     <div style="float:left;" class="nav-1">
