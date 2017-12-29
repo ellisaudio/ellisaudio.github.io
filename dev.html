@@ -62,7 +62,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
 
   .col-package-item 
@@ -75,7 +75,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
 
     .col-sale-item 
@@ -88,7 +88,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:scroll;
+    overflow:auto;
   }
   
   
@@ -353,6 +353,17 @@
     padding-top: 20px;
   }
 
+  .item-title
+  {
+  	font-size:large;
+  	text-align:center;
+  }
+
+  #package-item-title
+  {
+  	font-size:x-large;
+  }
+
   @media screen and (max-width: 699px)
   {
     .col-sale-item 
@@ -360,6 +371,7 @@
       width: 99%;
       min-height:250px;
       max-height:400px;
+      overflow:scroll;
     }
 
     .col-hire-item 
@@ -367,6 +379,7 @@
       width: 99%;
       min-height:250px;
       max-height:400px;
+      overflow:scroll;
     }
 
     .col-package-item 
@@ -374,6 +387,17 @@
       width: 99%;
       min-height:300px;
       max-height:600px;
+      overflow:scroll;
+    }
+
+    .item-title
+    {
+    	font-size:large;
+    }
+
+    #package-item-title
+    {
+    	font-size:large;
     }
 
     #getQuote
@@ -449,16 +473,19 @@
     .col-package-item 
     {
       width: 32%;
+      overflow:scroll;
     }
 
       .col-sale-item 
     {
       width: 32%;
+      overflow:scroll;
     }
 
     .col-hire-item
     {
       width: 32%;
+      overflow:scroll;
     }
 
     #getQuote
@@ -696,7 +723,7 @@
       for(var ii in items)
       {
         var html = "<div class='col-sale-item' style=''>";
-        html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+        html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
@@ -751,7 +778,7 @@
         if(category == "Show All")
         {
           var html = "<div class='col-hire-item' style=''>";
-          html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+          html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -767,7 +794,7 @@
           if(items[ii].category == category)
           {
             var html = "<div class='col-hire-item' style=''>";
-            html += "<h1 style='font-size:large;text-align:center;'>"+items[ii].name+"</h1>";
+            html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
@@ -792,7 +819,7 @@
         if(!items[ii].hide)
         {
           var html = "<div class='col-package-item' style=''>";
-          html += "<h1 style='font-size:x-large;text-align:center;'>"+items[ii].name+"</h1>";
+          html += "<h1 class='item-title' id='package-item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
