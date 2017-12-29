@@ -177,6 +177,7 @@
     margin: 0;
     border-radius: 2px;
     border: 2px solid #8587fe;
+    font-size:medium;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -201,12 +202,13 @@
 .dropdown-content button {
     color: black;
     background-color: white;
-    padding: 5px 16px;
+    padding: 10px 16px;
     text-decoration: bold;
     display: block;
     border-radius: 0px;
     border: 0px solid #8587fe;
     width:100%;
+    font-size:medium;
 }
 
 /* Change color of dropdown links on hover */
@@ -795,7 +797,7 @@
         }
         else
         {
-          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+", "+'"'+sort+'"'+");showSort("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+");'>"+categories[ii].category+"</button><br>");
+          $('#filter-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+", "+'"'+sort+'"'+");showSort("+'"'+page+'"'+", "+'"'+categories[ii].category+'"'+");'>"+categories[ii].category+"</button>");
         }
       }
     });
@@ -809,7 +811,7 @@
       var sortoptions = ["Category", "Name", "Price Low-High", "Price High-Low"];
       for(var ii in sortoptions)
       {
-        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button><br>");
+        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button>");
       }
     return;
   }
