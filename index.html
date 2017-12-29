@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-   <title>Ellis Audio - Quality PA hire in Brisbane</title>
 <div id="container">
   <head>
     <base target="_top">
@@ -45,7 +44,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:auto;
+    overflow:scroll;
   }
 
   .col-package-item 
@@ -58,7 +57,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:auto;
+    overflow:scroll;
   }
 
     .col-sale-item 
@@ -71,7 +70,7 @@
     padding:15px;
     border-radius: 2px;
     border: 2px solid #8587fe;
-    overflow:auto;
+    overflow:scroll;
   }
   
   
@@ -91,7 +90,7 @@
     min-height:100%;
     position:relative;
     font-family: 'Open Sans', sans-serif;
-    overflow-x:scroll;
+    overflow:scroll;
     -webkit-overflow-scrolling: touch;
   }
   
@@ -99,7 +98,7 @@
   {
     padding:10px;
     padding-bottom:130px;   /* Height of the footer */
-    overflow-x:scroll;
+    overflow:scroll;
     -webkit-overflow-scrolling: touch;
     background-size: 100%;
     background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
@@ -131,7 +130,7 @@
     height:100%;
     padding:0px;
     /*background-color: #40404d;*/
-    overflow-x:scroll;
+    overflow:scroll;
     -webkit-overflow-scrolling: touch;
        margin:0;
 
@@ -148,7 +147,7 @@
     #profile-pic
     {
       width:30%;
-      overflow:auto;
+      overflow:scroll;
       border:0;
       margin:0;
       float:left;
@@ -156,7 +155,7 @@
 
     #profile-blurb
     {
-    overflow: auto;
+    overflow:scroll;
     width: 68%;
     padding: 0;
     border-radius: 0;
@@ -283,7 +282,7 @@
     background-color: #313deb;
 }
   
-  #nav-large
+  #nav
   {
     width: 100%; /* 1000 */;
     font-family: 'Open Sans', sans-serif;
@@ -298,7 +297,30 @@
     z-index:1;
     background-color: #8587fe;
     display: inline-block;
+  }  
+
+  #nav-btn-container
+  {
+    display:none;
+    width:100%;
+  }
+
+  #nav-btn
+  {
+    width: 10%;
+    font-size: xx-large;
+    padding: 0.5%;
+    text-align: center;
+    font-weight: normal;
   }   
+  #nav-btn-img
+  {
+    display:block;
+    margin: 0 auto;
+    max-width:100%;
+    object-fit:contain;
+    border-radius: 2px;
+  }
 
   #logo-text
   {
@@ -306,7 +328,7 @@
     padding: 0 15px;
     max-height:10%;
     min-height:10%;
-  }  
+  }
 
   @media screen and (max-width: 699px)
   {
@@ -341,10 +363,15 @@
       width:100%;
     }
 
-    #nav-large
+    #nav
+    {
+      display: none;
+    } 
+
+    #nav-btn-container
     {
       display: block;
-    }    
+    }   
 
     .nav-dropdown-content
     {
@@ -416,8 +443,10 @@
   </div>
   <div class='row' style=''>
   <div class='col-12' style='margin-bottom:auto;0;padding: 0;background-color:#40404d;'>
-
-  <nav class="clearfix" role="navigation" id="nav-large" style="float:left;">
+  <div style="float:left;" id="nav-btn-container" class="nav-1">
+    <button id="nav-btn" class="nav-btn-1" style="float:left;" onclick="$('#nav').toggle();"><img id="nav-btn-img" src="ellisaudio.github.io/DB/images/icons8-menu-50.png"></button>
+  </div>
+  <nav class="clearfix" role="navigation" id="nav" style="float:left;">
     <div style="float:left;" class="nav-1">
     <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
   </div>
@@ -771,3 +800,6 @@
 </div>
 </footer>
 </html>
+
+
+
