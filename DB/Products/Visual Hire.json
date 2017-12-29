@@ -1,6 +1,7 @@
 [
  {
    "name": "HDBaseT HDMI over Ethernet Extender",
+   "hide" : false,
    "catalog": 1,
    "category": "Accessories",
    "quantity": 2,
@@ -13,6 +14,7 @@
  },
  {
    "name": "HDMI Cable (1.5 m)",
+   "hide" : false,
    "catalog": 2,
    "category": "Cables",
    "quantity": 8,
@@ -25,6 +27,7 @@
  },
  {
    "name": "VGA Cable (1.5 m)",
+   "hide" : false,
    "catalog": 3,
    "category": "Cables",
    "quantity": 8,
@@ -37,6 +40,7 @@
  },
  {
    "name": "VGA over Ethernet Extender",
+   "hide" : true,
    "catalog": 4,
    "category": "Accessories",
    "quantity": 1,
@@ -49,6 +53,7 @@
  },
  {
    "name": "Mini Display Port M to VGA F",
+   "hide" : false,
    "catalog": 5,
    "category": "Adapters",
    "quantity": 2,
@@ -61,6 +66,7 @@
  },
  {
    "name": "Display Port M to HDMI F",
+   "hide" : false,
    "catalog": 6,
    "category": "Adapters",
    "quantity": 1,
@@ -73,6 +79,7 @@
  },
  {
    "name": "Mini Display Port M to HDMI F",
+   "hide" : false,
    "catalog": 7,
    "category": "Adapters",
    "quantity": 1,
@@ -85,6 +92,7 @@
  },
  {
    "name": "DVI M to VGA F",
+   "hide" : false,
    "catalog": 8,
    "category": "Adapters",
    "quantity": 5,
@@ -97,6 +105,7 @@
  },
  {
    "name": "DVI M to HDMI F",
+   "hide" : false,
    "catalog": 9,
    "category": "Adapters",
    "quantity": 3,
@@ -109,6 +118,7 @@
  },
  {
    "name": "Mini Display Port M to Display Port F",
+   "hide" : false,
    "catalog": 10,
    "category": "Adapters",
    "quantity": 2,
@@ -121,6 +131,7 @@
  },
  {
    "name": "Bauhn Wireless Presenter",
+   "hide" : false,
    "catalog": 11,
    "category": "Accessories",
    "quantity": 1,

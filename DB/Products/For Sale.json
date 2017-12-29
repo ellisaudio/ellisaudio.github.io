@@ -1,6 +1,7 @@
 [
  {
    "name": "Sennheiser XS Wireless",
+   "hide" : false,
    "catalog": 53,
    "category": "Microphones",
    "quantity": 1,

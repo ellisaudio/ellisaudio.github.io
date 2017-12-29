@@ -1,6 +1,7 @@
 [
  {
    "name": "Behringer P-1 + PSU",
+   "hide" : false,
    "catalog": 1,
    "category": "Accessories",
    "quantity": 5,
@@ -13,6 +14,7 @@
  },
  {
    "name": "Tenma Handheld Digital SPL Meter",
+   "hide" : false,
    "catalog": 2,
    "category": "Accessories",
    "quantity": 1,
@@ -25,6 +27,7 @@
  },
  {
    "name": "LED Gooseneck Sound Desk Lamp",
+   "hide" : false,
    "catalog": 3,
    "category": "Accessories",
    "quantity": 1,
@@ -37,6 +40,7 @@
  },
  {
    "name": "TP-Link Archer C59 Wireless Router",
+   "hide" : false,
    "catalog": 72,
    "category": "Accessories",
    "quantity": 1,
@@ -49,6 +53,7 @@
  },
  {
    "name": "XLR M to 6.5mm TS M",
+   "hide" : false,
    "catalog": 55,
    "category": "Adapters",
    "quantity": 3,
@@ -61,6 +66,7 @@
  },
  {
    "name": "XLR M to RCA F",
+   "hide" : false,
    "catalog": 56,
    "category": "Adapters",
    "quantity": 1,
@@ -73,6 +79,7 @@
  },
  {
    "name": "6.5mm TRS M to 3.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 57,
    "category": "Adapters",
    "quantity": 8,
@@ -85,6 +92,7 @@
  },
  {
    "name": "6.5mm TRS F to 3.5mm TRS M Adapter",
+   "hide" : false,
    "catalog": 58,
    "category": "Adapters",
    "quantity": 3,
@@ -97,6 +105,7 @@
  },
  {
    "name": "3.5mm TRS F to 3.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 59,
    "category": "Adapters",
    "quantity": 1,
@@ -109,6 +118,7 @@
  },
  {
    "name": "6.5mm TRS F to 6.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 60,
    "category": "Adapters",
    "quantity": 1,
@@ -121,6 +131,7 @@
  },
  {
    "name": "6.5mm TRS M to RCA F Adapter",
+   "hide" : false,
    "catalog": 61,
    "category": "Adapters",
    "quantity": 1,
@@ -133,6 +144,7 @@
  },
  {
    "name": "6.5mm TRS M to 2 x RCA F Adapter",
+   "hide" : false,
    "catalog": 62,
    "category": "Adapters",
    "quantity": 1,
@@ -145,6 +157,7 @@
  },
  {
    "name": "6.5mm TRS M to 2 x RCA M Adapter",
+   "hide" : false,
    "catalog": 63,
    "category": "Adapters",
    "quantity": 1,
@@ -159,6 +172,7 @@
    "name": "3.5mm TRS F to 2 x RCA M Adapter",
    "catalog": 64,
    "category": "Adapters",
+   "hide" : false,
    "quantity": 1,
    "perDay": "POA",
    "perWeek": "POA",
@@ -169,6 +183,7 @@
  },
  {
    "name": "2 x RCA F to 2 x RCA F Adapter",
+   "hide" : false,
    "catalog": 65,
    "category": "Adapters",
    "quantity": 1,
@@ -181,6 +196,7 @@
  },
  {
    "name": "3 x RCA F to 3 x RCA F Adapter",
+   "hide" : false,
    "catalog": 66,
    "category": "Adapters",
    "quantity": 1,
@@ -193,6 +209,7 @@
  },
  {
    "name": "2 x RCA F to 2 x 3.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 67,
    "category": "Adapters",
    "quantity": 1,
@@ -205,6 +222,7 @@
  },
  {
    "name": "3.5mm TRS F to 2 x 3.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 68,
    "category": "Adapters",
    "quantity": 1,
@@ -217,6 +235,7 @@
  },
  {
    "name": "3.5mm TRS F to 2 x 6.5mm TRS F Adapter",
+   "hide" : false,
    "catalog": 69,
    "category": "Adapters",
    "quantity": 1,
@@ -229,6 +248,7 @@
  },
  {
    "name": "3.5mm TRS F to 2 x 3.5 mm TS M Adapter",
+   "hide" : false,
    "catalog": 70,
    "category": "Adapters",
    "quantity": 2,
@@ -241,6 +261,7 @@
  },
  {
    "name": "Drum Tunning Key",
+   "hide" : false,
    "catalog": 71,
    "category": "Accessories",
    "quantity": 1,
@@ -253,6 +274,7 @@
  },
  {
    "name": "Crown XLS 1500",
+   "hide" : false,
    "catalog": 4,
    "category": "Amplifiers",
    "quantity": 1,
@@ -265,6 +287,7 @@
  },
  {
    "name": "XLR Microphone Cable (1 m)",
+   "hide" : false,
    "catalog": 5,
    "category": "Cables",
    "quantity": 3,
@@ -277,6 +300,7 @@
  },
  {
    "name": "XLR Microphone Cable (3-4 m)",
+   "hide" : false,
    "catalog": 6,
    "category": "Cables",
    "quantity": 7,
@@ -289,6 +313,7 @@
  },
  {
    "name": "XLR Microphone Cable (5-6 m)",
+   "hide" : false,
    "catalog": 7,
    "category": "Cables",
    "quantity": 7,
@@ -301,6 +326,7 @@
  },
  {
    "name": "XLR Microphone Cable (9-10 m)",
+   "hide" : false,
    "catalog": 8,
    "category": "Cables",
    "quantity": 8,
@@ -313,6 +339,7 @@
  },
  {
    "name": "6.5mm - XLR M Cable (3 m)",
+   "hide" : false,
    "catalog": 9,
    "category": "Cables",
    "quantity": 2,
@@ -325,6 +352,7 @@
  },
  {
    "name": "6.5mm - XLR M Cable (6 m)",
+   "hide" : false,
    "catalog": 10,
    "category": "Cables",
    "quantity": 6,
@@ -337,6 +365,7 @@
  },
  {
    "name": "6.5mm - XLR F Cable (1 m)",
+   "hide" : false,
    "catalog": 11,
    "category": "Cables",
    "quantity": 3,
@@ -349,6 +378,7 @@
  },
  {
    "name": "6.5mm TS/TRS Cable (1 m)",
+   "hide" : false,
    "catalog": 12,
    "category": "Cables",
    "quantity": 2,
@@ -361,6 +391,7 @@
  },
  {
    "name": "6.5mm TS/TRS Cable (3 m)",
+   "hide" : false,
    "catalog": 13,
    "category": "Cables",
    "quantity": 3,
@@ -373,6 +404,7 @@
  },
  {
    "name": "6.5mm TS/TRS Cable (6 m)",
+   "hide" : false,
    "catalog": 14,
    "category": "Cables",
    "quantity": 2,
@@ -385,6 +417,7 @@
  },
  {
    "name": "6.5mm TS/TRS Cable (9 m)",
+   "hide" : false,
    "catalog": 15,
    "category": "Cables",
    "quantity": 1,
@@ -397,6 +430,7 @@
  },
  {
    "name": "3.5mm TRS to 2 x XLR Cable (3 m)",
+   "hide" : false,
    "catalog": 16,
    "category": "Cables",
    "quantity": 1,
@@ -409,6 +443,7 @@
  },
  {
    "name": "3.5mm TRS to 2 x 6.5 mm TS Cable (3 m)",
+   "hide" : false,
    "catalog": 17,
    "category": "Cables",
    "quantity": 1,
@@ -421,6 +456,7 @@
  },
  {
    "name": "6.5mm TRS to 2 x 6.5 mm TS Cable (3 m)",
+   "hide" : false,
    "catalog": 18,
    "category": "Cables",
    "quantity": 1,
@@ -433,6 +469,7 @@
  },
  {
    "name": "SpeakON Cable (3-5 m)",
+   "hide" : false,
    "catalog": 19,
    "category": "Cables",
    "quantity": 4,
@@ -445,6 +482,7 @@
  },
  {
    "name": "SpeakON Cable (9-11 m)",
+   "hide" : false,
    "catalog": 20,
    "category": "Cables",
    "quantity": 3,
@@ -457,6 +495,7 @@
  },
  {
    "name": "CAT6A Ethernet Cable (40 m)",
+   "hide" : false,
    "catalog": 21,
    "category": "Cables",
    "quantity": 2,
@@ -469,6 +508,7 @@
  },
  {
    "name": "CAT6A Ethernet Cable (40 m) (CAT6A EtherCON)",
+   "hide" : false,
    "catalog": 22,
    "category": "Cables",
    "quantity": 1,
@@ -481,6 +521,7 @@
  },
  {
    "name": "IEC Power Cable (IEC-C13)",
+   "hide" : false,
    "catalog": 23,
    "category": "Cables",
    "quantity": 11,
@@ -493,6 +534,7 @@
  },
  {
    "name": "Piggyback Power Cable (5 m)",
+   "hide" : false,
    "catalog": 24,
    "category": "Cables",
    "quantity": 11,
@@ -505,6 +547,7 @@
  },
  {
    "name": "Piggyback Power Cable (10 m)",
+   "hide" : false,
    "catalog": 25,
    "category": "Cables",
    "quantity": 2,
@@ -517,6 +560,7 @@
  },
  {
    "name": "4 way Switched Power Board",
+   "hide" : false,
    "catalog": 26,
    "category": "Cables",
    "quantity": 5,
@@ -529,6 +573,7 @@
  },
  {
    "name": "12 way Power Board",
+   "hide" : false,
    "catalog": 27,
    "category": "Cables",
    "quantity": 1,
@@ -541,6 +586,7 @@
  },
  {
    "name": "Behringer X32 Compact",
+   "hide" : false,
    "catalog": 28,
    "category": "Audio Mixers",
    "quantity": 1,
@@ -553,6 +599,7 @@
  },
  {
    "name": "Behringer XR12",
+   "hide" : false,
    "catalog": 29,
    "category": "Audio Mixers",
    "quantity": 1,
@@ -565,6 +612,7 @@
  },
  {
    "name": "Peavey ID 1G",
+   "hide" : false,
    "catalog": 39,
    "category": "DI Boxes",
    "quantity": 1,
@@ -577,6 +625,7 @@
  },
  {
    "name": "McLelland PDB - 100",
+   "hide" : false,
    "catalog": 40,
    "category": "DI Boxes",
    "quantity": 1,
@@ -589,6 +638,7 @@
  },
  {
    "name": "Radial StageBug SB-1",
+   "hide" : false,
    "catalog": 73,
    "category": "DI Boxes",
    "quantity": 2,
@@ -601,6 +651,7 @@
  },
  {
    "name": "Sennheiser e845",
+   "hide" : false,
    "catalog": 30,
    "category": "Microphones",
    "quantity": 3,
@@ -613,6 +664,7 @@
  },
  {
    "name": "Shure SM58",
+   "hide" : false,
    "catalog": 31,
    "category": "Microphones",
    "quantity": 1,
@@ -625,6 +677,7 @@
  },
  {
    "name": "Shure PG58",
+   "hide" : false,
    "catalog": 32,
    "category": "Microphones",
    "quantity": 1,
@@ -637,6 +690,7 @@
  },
  {
    "name": "Rode M3",
+   "hide" : false,
    "catalog": 33,
    "category": "Microphones",
    "quantity": 2,
@@ -649,6 +703,7 @@
  },
  {
    "name": "Shure SM57",
+   "hide" : false,
    "catalog": 34,
    "category": "Microphones",
    "quantity": 1,
@@ -661,6 +716,7 @@
  },
  {
    "name": "Shure GLXD24/BETA58A",
+   "hide" : false,
    "catalog": 35,
    "category": "Microphones",
    "quantity": 2,
@@ -673,6 +729,7 @@
  },
  {
    "name": "Shure GLXD14/85",
+   "hide" : false,
    "catalog": 36,
    "category": "Microphones",
    "quantity": 1,
@@ -685,6 +742,7 @@
  },
  {
    "name": "JAG IMX6A Headset Microphone",
+   "hide" : false,
    "catalog": 37,
    "category": "Microphones",
    "quantity": 1,
@@ -697,6 +755,7 @@
  },
  {
    "name": "DBX RTA-M",
+   "hide" : false,
    "catalog": 38,
    "category": "Microphones",
    "quantity": 1,
@@ -709,6 +768,7 @@
  },
  {
    "name": "Behringer S16",
+   "hide" : false,
    "catalog": 41,
    "category": "Multicores & Snakes",
    "quantity": 1,
@@ -721,6 +781,7 @@
  },
  {
    "name": "30 m Loom - 8 XLR sends + 4 XLR returns",
+   "hide" : false,
    "catalog": 42,
    "category": "Multicores & Snakes",
    "quantity": 1,
@@ -733,6 +794,7 @@
  },
  {
    "name": "3 m Loom - 8 channel XLR",
+   "hide" : false,
    "catalog": 43,
    "category": "Multicores & Snakes",
    "quantity": 1,
@@ -745,6 +807,7 @@
  },
  {
    "name": "JBL EON15 G2",
+   "hide" : false,
    "catalog": 44,
    "category": "Speakers & Subs",
    "quantity": 2,
@@ -757,6 +820,7 @@
  },
  {
    "name": "Yamaha SW500 Subwoofer",
+   "hide" : false,
    "catalog": 45,
    "category": "Speakers & Subs",
    "quantity": 1,
@@ -769,6 +833,7 @@
  },
  {
    "name": "Passive Fold Back Speaker",
+   "hide" : false,
    "catalog": 46,
    "category": "Speakers & Subs",
    "quantity": 4,
@@ -781,6 +846,7 @@
  },
  {
    "name": "Tripod Speaker Stand",
+   "hide" : false,
    "catalog": 47,
    "category": "Stands",
    "quantity": 2,
@@ -793,6 +859,7 @@
  },
  {
    "name": "Tripod Boom Microphone Stand",
+   "hide" : false,
    "catalog": 48,
    "category": "Stands",
    "quantity": 5,
@@ -805,6 +872,7 @@
  },
  {
    "name": "Solid Base Microphone Stand",
+   "hide" : false,
    "catalog": 49,
    "category": "Stands",
    "quantity": 1,
@@ -817,6 +885,7 @@
  },
  {
    "name": "Short Tripod Boom Microphone Stand",
+   "hide" : false,
    "catalog": 50,
    "category": "Stands",
    "quantity": 2,
@@ -829,6 +898,7 @@
  },
  {
    "name": "Short Solid Base Microphone Stand",
+   "hide" : false,
    "catalog": 51,
    "category": "Stands",
    "quantity": 1,

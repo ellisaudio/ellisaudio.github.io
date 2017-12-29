@@ -1,6 +1,7 @@
 [
  {
    "name": "Enttec Open DMX USB",
+   "hide" : false,
    "catalog": 1,
    "category": "DMX",
    "quantity": 1,
@@ -13,6 +14,7 @@
  },
  {
    "name": "Donner 2.4 GHz Wireless Tx",
+   "hide" : false,
    "catalog": 2,
    "category": "DMX",
    "quantity": 1,
@@ -25,6 +27,7 @@
  },
  {
    "name": "Donner 2.4 GHz Wireless Rx",
+   "hide" : false,
    "catalog": 3,
    "category": "DMX",
    "quantity": 1,
@@ -37,6 +40,7 @@
  },
  {
    "name": "DMX Terminator",
+   "hide" : false,
    "catalog": 4,
    "category": "DMX",
    "quantity": 2,
@@ -49,6 +53,7 @@
  },
  {
    "name": "3 pin - 5 pin Adaptor",
+   "hide" : false,
    "catalog": 5,
    "category": "DMX",
    "quantity": 1,

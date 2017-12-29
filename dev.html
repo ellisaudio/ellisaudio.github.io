@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <div id="container">
   <head>
     <base target="_top">
@@ -517,7 +517,7 @@
   </div>
   <div class='col-6' id='logo-text' style=''>
   <h1 style='font-size:200%;float:left;margin-top:20px;margin-bottom: 5px'>Ellis Audio</h1>
-  <p id="tagline" style="color: darkgrey;"> Parties|Weddings|Live Music|Corporate events</p></div></a>
+  <p id="tagline" style="color: darkgrey;"> Parties | Weddings | Live Music | Corporate events</p></div></a>
   <div class="col-3" id="getQuote" style="float:right;text-align:center;font-family: 'Open Sans', sans-serif;">
   <br>
   <b>Get a Quote Today<br></b>
@@ -722,6 +722,8 @@
     {
       for(var ii in items)
       {
+        if(!items[ii].hide)
+        {
         var html = "<div class='col-sale-item' style=''>";
         html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
         html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
@@ -733,6 +735,7 @@
         }
         html += "</span></div>";
         $('#items').append(html);
+        }
       }
     });
   }
@@ -775,6 +778,8 @@
       }
       for(var ii in items)
       {
+        if(!items[ii].hide)
+        {
         if(category == "Show All")
         {
           var html = "<div class='col-hire-item' style=''>";
@@ -806,6 +811,7 @@
             $('#items').append(html);
           }
         }
+        }
       }
     });
   }
@@ -824,10 +830,6 @@
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
-          if(items[ii].website != "")
-          {
-            html += "<a href='"+items[ii].website+"'>More Info</a>";
-          }
           html += "</span></div>";
           $('#items').append(html);
         }
