@@ -120,7 +120,7 @@
     -webkit-overflow-scrolling: touch;
     background-size: 100%;
     background-image: url("https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24862291_908647219294098_495214972556443468_n.jpg?oh=a1a7885bde6877ae93090bb634183d83&oe=5AB51058");
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-position: center top;
     /*background-attachment: fixed;*/
   }
@@ -365,8 +365,12 @@
 
   @media screen and (max-width: 699px)
   {
-
-  	html, body, #container, #boby
+    #body
+    {
+     background-repeat: repeat-y; 
+    }
+    
+  	html, body, #container, #body
   	{
   		overflow:scroll;
   		-webkit-overflow-scrolling: touch;
@@ -476,8 +480,12 @@
 
   @media screen and (max-width: 1030px) and (min-width: 700px)
   {
+    #body
+    {
+     background-repeat: repeat-y; 
+    }
 
-  	html, body, #container, #boby
+  	html, body, #container, #body
   	{
   		overflow:scroll;
   		-webkit-overflow-scrolling: touch;
@@ -673,7 +681,7 @@
               html += "<br><img src='ellisaudio.github.io/DB/images/Nick Profile.jpeg' alt='Image Not Available' style='width:100%;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "</div>";
             html += "<div id='profile-blurb' style=''>";
-              html += "<h2 style='font-size:x-large'>Nick Ellis - Director</h2>";
+              html += "<h2 style='font-size:x-large'>Nick Ellis - Owner</h2>";
               html += "<p style='font-size:large;text-align:justify;'>Nick is the founder and owner of Ellis Audio, his desire is to provide high quality audio experiences for all of those using and listening to our systems. Nick has been operating Audio/Visual for over 10 years, including ten years of operating A/V though church (including two years overseeing the entire Audio/Visual ministry at two different churches) and operating Audio/Visual for six years for an international mission organisation.</p>";
             html += "</div>";
           html += "</div>";
