@@ -4,40 +4,44 @@
    "catalog": 1,
    "perDay": 100,
    "perWeek": "POA",
-   "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>1 x Vocal Microphones<br>Required Cables",
+   "shortDesc": "2 x 300W JBL Speakers<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>1 x Vocal Microphone<br>Required Stands & Cables<br>Add 500W Sub for $40 extra",
    "longDesc": "",
    "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A",
-   "hide" : false
+   "hide" : false,
+   "save" : 80
  },
  {
    "name": "Corporate Functions",
    "catalog": 2,
    "perDay": 150,
    "perWeek": "POA",
-   "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>2 x Shure GLXD Microphones (Lapel/Headset/Handheld)<br>Required Cables",
+   "shortDesc": "2 x 300W JBL Speakers<br>1 x Behringer XR12 Digital Mixer<br>1 x iPod/Laptop Cable<br>1 x Shure GLXD Microphone (Lapel/Headset/Handheld)<br>Required Stands & Cables<br>Add 500W Sub for $40 extra",
    "longDesc": "",
    "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A",
-   "hide" : false
+   "hide" : false,
+   "save" : 95
  },
  {
-   "name": "Small Bands",
+   "name": "Solo & Small Bands",
    "catalog": 3,
-   "perDay": 140,
+   "perDay": 160,
    "perWeek": 600,
-   "shortDesc": "2 x 300W JBL Speakers<br>2 x Speaker Stands<br>1 x Behringer XR12 Digital Mixer<br>2 x Foldback Wedge<br>3 x Vocal Microphones<br>2 x Instrument Microphones<br>3 x Tall Microphone Stands<br>2 x Small Microphone Stands<br>Required Cables",
+   "shortDesc": "2 x 300W JBL Speakers<br>1 x Behringer XR12 Digital Mixer<br>2 x Foldback Wedge<br>1 x Amplifier<br> 4 x Microphones & Di boxes<br>Required Stands & Cables<br>Add 500W Sub for $40 extra",
    "longDesc": "",
    "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A",
-   "hide" : false
+   "hide" : false,
+   "save" : 130
  },
  {
    "name": "Large Bands",
    "catalog": 4,
    "perDay": 300,
    "perWeek": 1200,
-   "shortDesc": "2 x 300W JBL Speakers<br>1 x 500W Subwoofer<br>2 x Speaker Stands<br>1 x Behringer X32 Compact Digital Mixer<br>4 x Foldback Wedge or Behringer P1 IEM's<br>4 x Vocal Microphones<br>3 x Instrument Microphones<br>Required Mic Stands<br>Required Cables",
+   "shortDesc": "2 x 300W JBL Speakers<br>1 x Behringer X32 Compact Digital Mixer<br>4 x Foldback Wedge or Behringer P1 IEM's<br>6 x Microphones & Di boxes<br>Required Stands & Cables<br>Add 500W Sub for $40 extra",
    "longDesc": "",
    "photo": "https://scontent.fbne3-1.fna.fbcdn.net/v/t1.0-9/24900087_911932592298894_89439111182113715_n.jpg?oh=1185395e01bd365416a9c7cb86aa681e&oe=5AD5FC6A",
-   "hide" : false
+   "hide" : false,
+   "save" : 70
  },
  {
    "name": "Conferences & Camps",
