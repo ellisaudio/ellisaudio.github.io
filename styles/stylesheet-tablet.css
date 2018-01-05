@@ -1,0 +1,52 @@
+<style>
+  @media screen and (max-width: 1030px) and (min-width: 700px)
+  {
+    #body
+    {
+     background-repeat: repeat-y; 
+     background-attachment: scroll;
+    }
+
+  	html, body, #container, #body
+  	{
+  		overflow:scroll;
+  		-webkit-overflow-scrolling: touch;
+  	}
+    .col-package-item 
+    {
+      width: 32%;
+      overflow:scroll;
+    }
+
+    .col-sale-item 
+    {
+      width: 32%;
+      overflow:scroll;
+    }
+
+    .col-hire-item
+    {
+      width: 32%;
+      overflow:scroll;
+    }
+
+    #getQuote
+    {
+      width:42%;
+      padding-top:40px;
+    }
+
+    #logo
+    {
+      width:20%;
+    }
+
+    #logo-text
+    {
+      width:220px;
+      margin:0;
+      padding-top:30px;
+    }
+
+  }
+</style> 
