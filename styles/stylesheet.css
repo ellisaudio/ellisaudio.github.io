@@ -13,6 +13,17 @@
 
   * {box-sizing: border-box;}
 
+  #logo:visited
+  {
+   color:inherit;
+  }
+
+  #tagline
+  {
+    margin-bottom: 0;
+    /*display:none;*/
+  }
+
   #getQuote
   {
     padding-top: 20px;
