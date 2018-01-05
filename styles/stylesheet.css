@@ -243,10 +243,10 @@
   }*/
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn 
+  /*.dropdown:hover .dropbtn 
   {
     background-color: #313deb;
-  }
+  }*/
 
   .nav-1
   {
