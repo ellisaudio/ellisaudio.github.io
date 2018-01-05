@@ -592,9 +592,9 @@
     <a href="#">Loading...</a>
   </div>
 </div>
-<div class="dropdown">
-  <button class="dropbtn" id="sort-btn" onmouseover="$('#sort-options').toggle()" style="display:none;">Sorted by</button>
-  <div id="sort-options" onmouseout="$('#sort-options').toggle()"class="dropdown-content">
+<div class="dropdown" onmouseover="$('#sort-options').show()" onmouseout="$('#sort-options').hide()">
+  <button class="dropbtn" id="sort-btn" style="display:none;">Sorted by</button>
+  <div id="sort-options" onmouseout="$('#sort-options').hide()"class="dropdown-content">
     <a href="#">Loading...</a>
   </div>
 </div>
