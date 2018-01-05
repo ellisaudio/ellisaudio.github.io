@@ -55,7 +55,7 @@
           html += "<h1 style='font-size:x-Large;text-align:center;'>Who are we?</h1>";
           html += "<div class='row'>";
             html += "<div id='profile-pic' style=''>";
-              html += "<br><img src='ellisaudio.github.io/DB/images/Nick Profile.jpeg' alt='Image Not Available' style='width:100%;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+              html += "<br><img src='DB/images/Nick Profile.jpeg' alt='Image Not Available' style='width:100%;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "</div>";
             html += "<div id='profile-blurb' style=''>";
               html += "<h2 style='font-size:x-large'>Nick Ellis - Owner</h2>";
@@ -75,7 +75,7 @@
       $('#filter-btn').hide();
       $('#sort-btn').hide();
       $('#items').empty();
-      $.getJSON("ellisaudio.github.io/index.json").done(function(items) 
+      $.getJSON("index.json").done(function(items) 
       { 
         $('#items').prepend("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>"+items.content+"</div></div>");
       });
@@ -106,7 +106,7 @@
 
   function showAboutUs()
   {
-    $.getJSON("ellisaudio.github.io/About Us.json").done(function(items) 
+    $.getJSON("About Us.json").done(function(items) 
     {
       $('#items').append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
     });
@@ -115,7 +115,7 @@
   function showSaleItems(page)
   {
     $('#items').empty();
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    $.getJSON("DB/Products/"+page+".json").done(function(items) 
     {
       for(var ii in items)
       {
@@ -123,7 +123,7 @@
         {
         var html = "<div class='col-sale-item' style=''>";
         html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
-        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<img src='DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
         html += "<span>";
         html += "<h2>$"+items[ii].cost+"</h2>";
         if(items[ii].website != "")
@@ -140,7 +140,7 @@
   function showHireItems(page, category, sort)
   {
     $('#items').empty();
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    $.getJSON("DB/Products/"+page+".json").done(function(items) 
     {
       if(sort == "Name")
       {
@@ -181,7 +181,7 @@
         {
           var html = "<div class='col-hire-item' style=''>";
           html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
-        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<img src='DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           if(items[ii].website != "")
@@ -197,7 +197,7 @@
           {
             var html = "<div class='col-hire-item' style=''>";
             html += "<h1 class='item-title' style=''>"+items[ii].name+"</h1>";
-        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<img src='DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
             html += "<span>";
             html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
             if(items[ii].website != "")
@@ -215,7 +215,7 @@
 
     function showPackages(page)
   {
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+".json").done(function(items) 
+    $.getJSON("DB/Products/"+page+".json").done(function(items) 
     {
       for(var ii in items)
       {
@@ -223,7 +223,7 @@
         {
           var html = "<div class='col-package-item' style=''>";
           html += "<h1 class='item-title' id='package-item-title' style=''>"+items[ii].name+"</h1>";
-        html += "<img src='ellisaudio.github.io/DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
+        html += "<img src='DB/images/"+page+"/"+items[ii].catalog+".jpeg' alt='Image Not Available' style='min-height:170px;max-height:170px;display:block;margin: 0 auto;max-width:100%;object-fit:contain;'>";
           html += "<span>";
           html += "<h2>$"+items[ii].perDay+"/Day       $"+items[ii].perWeek+"/Week</h2>";
           html += "<p>"+items[ii].shortDesc+"</p>";
@@ -236,7 +236,7 @@
 
   function showFilter(page, sort) 
   {
-    $.getJSON("ellisaudio.github.io/DB/Products/"+page+"-categories.json").done(function(categories) 
+    $.getJSON("DB/Products/"+page+"-categories.json").done(function(categories) 
     {
       $('#filter-btn').show()
       $('#filter-options').empty();
