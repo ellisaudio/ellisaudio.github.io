@@ -246,7 +246,7 @@
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn 
   {
-    background-color: #3e8e41;
+    background-color: #313deb;
   }
 
   .nav-1
@@ -298,10 +298,10 @@
   }
 
   /* Show the dropdown menu on hover */
-  #nav-dropdown:hover .nav-dropdown-content 
+/*  #nav-dropdown:hover .nav-dropdown-content 
   {
     display: block;
-  }
+  }*/
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .nav-btn-1:hover

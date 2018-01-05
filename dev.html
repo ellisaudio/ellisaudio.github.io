@@ -37,7 +37,7 @@
               <div style="float:left;" class="nav-1">
                 <button class="nav-btn-1" style="float:left;" onclick="$('#items').empty().append('Loading...');updatePage('Hire Packages', 'Show All', 'Category');">Packages for Hire</button>
               </div>
-              <div style="float:left;" id="nav-dropdown" class="nav-1">
+              <div style="float:left;" id="nav-dropdown" class="nav-1" onmouseover="$('.nav-dropdown-content').show()" onmouseout="$('.nav-dropdown-content').hide()">
                 <button id="hire-btn" class="nav-btn-1" style="display:block;">Equipment for Hire</button>
                 <div id="" class="nav-dropdown-content">
                   <button class="nav-btn-2" onclick="$('#items').empty().append('Loading...');updatePage('Audio Hire', 'Show All', 'Category');">Audio Equipment</button><br> 
@@ -66,7 +66,7 @@
         <div class="row" id="btn-row">
           <div class="col-4" style="min-height:0 margin-bottom:0;"></div>
           <div class="col-5">
-            <div class="dropdown">
+            <div class="dropdown" onmouseover="$('#filter-options').show()" onmouseout="$('#filter-options').hide()">
               <button class="dropbtn" id="filter-btn" style="display:none;">Filter by Category</button>
               <div id="filter-options" class="dropdown-content">
                 <a href="#">Loading...</a>
