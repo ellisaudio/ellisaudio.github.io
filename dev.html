@@ -228,9 +228,9 @@
 .dropdown-content button:hover {background-color: #313deb; color:white;}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+/*.dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
@@ -593,7 +593,7 @@
   </div>
 </div>
 <div class="dropdown">
-  <button class="dropbtn" id="sort-btn" style="display:none;">Sorted by</button>
+  <button class="dropbtn" id="sort-btn" onmouseover="$('#sort-options').toggle()" style="display:none;">Sorted by</button>
   <div id="sort-options" class="dropdown-content">
     <a href="#">Loading...</a>
   </div>
@@ -609,6 +609,8 @@
   </div>    
 <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script >
+  //$(".dropbtn").hover($(this).show());
+
   // The code in this function runs when the page is loaded.
   $(function()
   {
