@@ -59,7 +59,7 @@
             html += "</div>";
             html += "<div id='profile-blurb' style=''>";
               html += "<h2 style='font-size:x-large'>Nick Ellis - Owner</h2>";
-              html += "<p style='font-size:large;text-align:justify;'>Nick is the founder and owner of Ellis Audio, his desire is to provide high quality audio experiences for all of those using and listening to our systems. Nick has been operating Audio/Visual for over 10 years, including ten years of operating A/V though church (including two years overseeing the entire Audio/Visual ministry at two different churches) and operating Audio/Visual for six years for an international mission organisation.</p>";
+              html += "<p style='font-size:large;text-align:justify;'>Nick is the founder and owner of Ellis Audio, his desire is to provide high quality audio experiences for all of those using and listening to our systems. Nick has been operating Audio/Visual for over 10 years, including ten years of operating Audio/Visual through church (including two years overseeing the entire Audio/Visual ministry at two different churches) and operating Audio/Visual for six years for an international mission organisation.</p>";
             html += "</div>";
           html += "</div>";
         html += "</div>";
