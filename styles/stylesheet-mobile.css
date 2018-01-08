@@ -3,9 +3,9 @@
   {
     #body
     {
-     /*background-repeat: repeat-y; 
-     background-attachment: scroll;*/
-      background-size: cover;
+     background-repeat: repeat-y; 
+     background-attachment: scroll;
+      /*background-size: cover;*/
     }
     
   	html, body, #container, #body
