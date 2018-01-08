@@ -266,7 +266,7 @@
       var sortoptions = ["Category", "Name", "Price Low-High", "Price High-Low"];
       for(var ii in sortoptions)
       {
-        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sorted by "+sortoptions[ii]+"</button>");
+        $('#sort-options').append("<button onclick='$("+'"'+"#items"+'"'+").empty().append("+'"Loading..."'+");updatePage("+'"'+page+'", "'+category+'", "'+sortoptions[ii]+'"'+");showfilter("+'"'+page+'", "'+sortoptions[ii]+'"'+");'>Sort by "+sortoptions[ii]+"</button>");
       }
     return;
   }
