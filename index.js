@@ -22,7 +22,9 @@
     }
     else if(page == "Instructions")
     {
+      $('#items').empty().prepend("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>");
       showInstructions(page);
+      $('#items').append("</div></div>");
       $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
@@ -121,7 +123,6 @@
 
   function showInstructions(page)
   {
-    $('#items').append("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>");
     $('#items').append("<h2>On Pick up</h2>");
     $('#items').append("Pick up the equipment at the arranged time from us in Yeronga.");
     $('#items').append("Please check your vehicle is large enough to fit all of your hire equipment. Ask us about how much space you need if you’re unsure. If you do not have a suitable vehicle to collect the equipment, ask us for delivery rates.");
@@ -135,9 +136,6 @@
     $('#items').append("<ul><li>How to connect the system together</li><li>Microphone technique and placement</li><li>Optimal operating level and signs that the system is being over-driven</li><li>Speaker placement to avoid feedback</li><li>Operating distance for wireless microphones</li><li>Connecting external devices such as laptops and iPods</li></ul>");
     $('#items').append("<h2>On Return:</h2>");
     $('#items').append("At the end of your event, please check all equipment and cables off your equipment list before leaving your venue.  Any missing equipment (cables, power boards etc.) will be charged for replacement if they are missing on return. Roll cables to the best of your ability and ensure you have all road cases and covers that come with the equipment.  Pack into your vehicle safely and securely.");
-
-
-    $('#items').append("</div></div>");
   }
 
   function showSaleItems(page)
