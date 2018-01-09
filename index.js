@@ -26,12 +26,12 @@
         $('#items').append("<h2>On Pick up</h2>");
         $('#items').append("<p>Pick up the equipment at the arranged time from us in Yeronga.</p>");
         $('#items').append("<p>Please check your vehicle is large enough to fit all of your hire equipment. Ask us about how much space you need if you’re unsure. If you do not have a suitable vehicle to collect the equipment, ask us for delivery rates.</p>");
-        $('#items').append("Bring with you current photo ID with your current address.  If your photo ID does not have your current address, please bring in 2 x forms/bills with your current address on it.</p>");
+        $('#items').append("<p>Bring with you current photo ID with your current address. If your photo ID does not have your current address, please bring in 2 x forms/bills with your current address on it.</p>");
         $('#items').append("<p>Full payment is required before collection of your hire equipment be aware that if you choose to pay by direct deposit or cheque in advance, you must allow a minimum of 48 hours (or 2 x working days) for funds to clear in our account.</p>");
         $('#items').append("<p>The individual collecting the hire will be the individual signing for the hire.</p>");
         $('#items').append("<p>Please refer to our terms and conditions and ensure the person collecting the hire is responsible for the equipment.</p>");
         $('#items').append("<p>If you intend to use any of your own equipment with ours, please have all relevant details available for us such as additional cable requirements.</p>");
-        $('#items').append("We will ask you if you know how to use the equipment. Please ask us any questions you have, we are more than happy to answer them to help you get the most out of your event. Please ask us to avoid any damage or disappointment with your event.</p>");
+        $('#items').append("<p>We will ask you if you know how to use the equipment. Please ask us any questions you have, we are more than happy to answer them to help you get the most out of your event. Please ask us to avoid any damage or disappointment with your event.</p>");
         $('#items').append("<p>Common topics of query include:</p>");
         $('#items').append("<p><ul><li>How to connect the system together</li><li>Microphone technique and placement</li><li>Optimal operating level and signs that the system is being over-driven</li><li>Speaker placement to avoid feedback</li><li>Operating distance for wireless microphones</li><li>Connecting external devices such as laptops and iPods</li></ul></p>");
         $('#items').append("<h2>On Return:</h2>");
