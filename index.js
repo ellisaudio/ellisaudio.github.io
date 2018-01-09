@@ -20,6 +20,13 @@
       $('#filter-btn').hide();
       $('#sort-btn').hide();
     }
+    else if(page == "Instructions")
+    {
+      showInstructions(page);
+      $('#btn-row').hide();
+      $('#filter-btn').hide();
+      $('#sort-btn').hide();
+    }
     else if(page.indexOf("Hire") != -1)
     {
       if(category == "Show All")
@@ -110,6 +117,27 @@
     {
       $('#items').append("<div class='col-12' style='background-color:white;margin:0.5%;padding:15px;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;'>"+items.content+"</div>");
     });
+  }
+
+  function showInstructions(page)
+  {
+    $('#items').append("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>");
+    $('#items').append("<h2>On Pick up</h2>");
+    $('#items').append("Pick up the equipment at the arranged time from us in Yeronga.");
+    $('#items').append("Please check your vehicle is large enough to fit all of your hire equipment. Ask us about how much space you need if you’re unsure. If you do not have a suitable vehicle to collect the equipment, ask us for delivery rates.");
+    $('#items').append("Bring with you current photo ID with your current address.  If your photo ID does not have your current address, please bring in 2 x forms/bills with your current address on it.");
+    $('#items').append("Full payment is required before collection of your hire equipment be aware that if you choose to pay by direct deposit or cheque in advance, you must allow a minimum of 48 hours (or 2 x working days) for funds to clear in our account.");
+    $('#items').append("The individual collecting the hire will be the individual signing for the hire. ");
+    $('#items').append("Please refer to our terms and conditions and ensure the person collecting the hire is responsible for the equipment.");
+    $('#items').append("If you intend to use any of your own equipment with ours, please have all relevant details available for us such as additional cable requirements.");
+    $('#items').append("We will ask you if you know how to use the equipment. Please ask us any questions you have, we are more than happy to answer them to help you get the most out of your event. Please ask us to avoid any damage or disappointment with your event.");
+    $('#items').append("Common topics of query include:");
+    $('#items').append("<ul><li>How to connect the system together</li><li>Microphone technique and placement</li><li>Optimal operating level and signs that the system is being over-driven</li><li>Speaker placement to avoid feedback</li><li>Operating distance for wireless microphones</li><li>Connecting external devices such as laptops and iPods</li></ul>");
+    $('#items').append("<h2>On Return:</h2>");
+    $('#items').append("At the end of your event, please check all equipment and cables off your equipment list before leaving your venue.  Any missing equipment (cables, power boards etc.) will be charged for replacement if they are missing on return. Roll cables to the best of your ability and ensure you have all road cases and covers that come with the equipment.  Pack into your vehicle safely and securely.");
+
+
+    $('#items').append("</div></div>");
   }
 
   function showSaleItems(page)
