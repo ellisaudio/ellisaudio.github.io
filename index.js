@@ -35,7 +35,7 @@
         $('#items').append("<p>Common topics of query include:</p>");
         $('#items').append("<p><ul><li>How to connect the system together</li><li>Microphone technique and placement</li><li>Optimal operating level and signs that the system is being over-driven</li><li>Speaker placement to avoid feedback</li><li>Operating distance for wireless microphones</li><li>Connecting external devices such as laptops and iPods</li></ul></p>");
         $('#items').append("<h2>On Return:</h2>");
-        $('#items').append("<p>At the end of your event, please check all equipment and cables off your equipment list before leaving your venue.  Any missing equipment (cables, power boards etc.) will be charged for replacement if they are missing on return. Roll cables to the best of your ability and ensure you have all road cases and covers that come with the equipment.  Pack into your vehicle safely and securely.</p></div></div>");
+        $('#items').append("<p>At the end of your event, please check all equipment and cables off your equipment list before leaving your venue.  Any missing equipment (cables, power boards etc.) will be charged for replacement if they are missing on return. Roll cables to the best of your ability and ensure you have all road cases and covers that come with the equipment.  Pack into your vehicle safely and securely.</p>/div></div></div></div>");
       $('#btn-row').hide();
       $('#filter-btn').hide();
       $('#sort-btn').hide();
