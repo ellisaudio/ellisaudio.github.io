@@ -22,7 +22,7 @@
     }
     else if(page == "Instructions")
     {
-      $('#items').empty().prepend("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>");
+      $('#items').empty().append("<div class='row'><div class='col-12' style='background-color:white;margin:0.5%;padding:15px;opacity: 0.8;border-radius: 2px;border: 2px solid #8587fe;min-height:200px;text-align:center;width:99%'>");
         $('#items').append("<h2>On Pick up</h2>");
         $('#items').append("<p>Pick up the equipment at the arranged time from us in Yeronga.</p>");
         $('#items').append("<p>Please check your vehicle is large enough to fit all of your hire equipment. Ask us about how much space you need if you’re unsure. If you do not have a suitable vehicle to collect the equipment, ask us for delivery rates.</p>");
